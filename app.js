@@ -74,8 +74,8 @@
       ],
       featuredTitle: "Referans Projeler",
       allProjects: "Tüm projeler",
-      ctaTitle: "Projeniz İçin Yapısal Analiz Desteği Mi Gerekiyor?",
-      ctaText: "Proje kapsamını, yerini ve takvimini kısaca yazın.",
+      ctaTitle: "Statik Proje Teklifi İçin Bize Yazın",
+      ctaText: "",
       projectsTitle: "Projeler",
       projectsLead: function (n, m) { return n + " tamamlanmış" + (m ? " ve " + m + " devam eden" : "") + " proje. Görseller statik modellerden, görselleştirmelerden ve şantiye fotoğraflarından oluşur."; },
       filterAll: "Tümü",
@@ -223,8 +223,8 @@
       ],
       featuredTitle: "Reference Projects",
       allProjects: "All projects",
-      ctaTitle: "Need Structural Analysis Support For Your Project?",
-      ctaText: "Send a short note on scope, location and schedule.",
+      ctaTitle: "Request a Structural Design Quote",
+      ctaText: "",
       projectsTitle: "Projects",
       projectsLead: function (n, m) { return n + " completed projects" + (m ? " and " + m + " ongoing" : "") + ". Images come from structural models, renderings and site photos."; },
       filterAll: "All",
@@ -462,7 +462,7 @@
 
   function ctaBlock() {
     var x = t();
-    return '<section class="cta"><div class="wrap cta-grid"><div><h2>' + esc(TC(x.ctaTitle)) + "</h2><p>" + esc(x.ctaText) + '</p></div><div class="cta-actions">' +
+    return '<section class="cta"><div class="wrap cta-grid"><div><h2>' + esc(TC(x.ctaTitle)) + "</h2>" + (x.ctaText ? "<p>" + esc(x.ctaText) + "</p>" : "") + '</div><div class="cta-actions">' +
       '<a class="btn btn-dark" href="' + waLink() + '" target="_blank" rel="noopener">' + esc(TC(x.whatsapp)) + "</a>" +
       '<a class="btn btn-line-dark" href="mailto:' + MAIL + '">' + MAIL + "</a></div></div></section>";
   }
