@@ -340,9 +340,9 @@ window.PROJECTS = [
   },
   {
     slug: "haci-omerli-mesire", status: "done", cat: "steel", kind: "design", country: "TR",
-    title: { tr: "Hacı Ömerli Mesire Alanı Sosyal Tesis", en: "Hacı Ömerli Recreation Area Pavilion" },
+    title: { tr: "Hacı Ömerli Mesire Alanı Sosyal Tesis", en: "Hacı Ömerli Recreation Area Amenity Building" },
     place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye" },
-    scope: { tr: "Çelik konstrüksiyon sosyal alan", en: "Structural steel pavilion" },
+    scope: { tr: "Çelik konstrüksiyon sosyal alan", en: "Structural steel amenity building" },
     facts: [
       ["area", "240 m²"],
       ["steel", "18,8 ton|18.8 t"],
@@ -403,7 +403,7 @@ window.PROJECTS = [
     place: { tr: "Şakran, Aliağa, İzmir", en: "Şakran, Aliağa, İzmir, Türkiye" },
     facts: [
       ["area", "990 m²|990 m² gross floor area"],
-      ["storeys", "1 bodrum + zemin + 3 normal kat|Basement + ground + 3 floors"],
+      ["storeys", "1 bodrum + zemin + 3 normal kat|Basement + ground + 3 storeys"],
       ["system", "Yüksek süneklik düzeyli çerçeve ve boşluksuz perde|High-ductility frames with solid shear walls"],
       ["delivered", "Temmuz 2023|July 2023"]
     ],

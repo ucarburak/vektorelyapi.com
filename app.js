@@ -178,18 +178,18 @@
       services: {
         water: {
           title: "Treatment Plants and Water-Retaining Structures",
-          text: "We design the reinforced concrete structures of wastewater and drinking water treatment plants: basins, clarifiers, aeration units, tanks and plant buildings. At tender stage we prepare structural quantities and cost estimates for contractors.",
+          text: "We design the reinforced concrete structures of wastewater and drinking water treatment plants: basins, clarifiers, aeration units, tanks and plant buildings. At tender stage, we prepare structural quantities and cost estimates for contractors.",
           list: ["Aeration and equalisation basins", "Circular clarifiers", "Clean water and process tanks", "Structural quantities and cost estimates for tenders"]
         },
         rc: {
           title: "Reinforced Concrete Buildings",
           text: "We prepare structural calculations and construction drawings for residential, public and industrial concrete buildings, foundations and retaining structures. We also carry out performance assessment and strengthening of existing buildings, and independent checking of other offices' designs.",
-          list: ["Residential and commercial buildings", "Schools, healthcare and public buildings", "Industrial and production buildings", "Car parks and multi-level basements", "Concrete silos, bunkers and storage structures", "Equipment and machine foundations", "Raft, piled and strip foundations", "Retaining walls and basement walls", "Strengthening and performance assessment", "Structural design review and independent checking", "Quantity take-off and cost estimates"]
+          list: ["Residential and commercial buildings", "Schools, healthcare and public buildings", "Industrial and production buildings", "Car parks and multi-level basements", "Concrete silos, bunkers and storage structures", "Equipment and machine foundations", "Raft, piled and strip foundations", "Retaining walls and basement walls", "Strengthening and performance assessment", "Structural design review and independent checking", "Quantities and cost estimates"]
         },
         steel: {
           title: "Steel Structures",
           text: "We prepare structural calculations and construction drawings for steel warehouses, workshops, agricultural and industrial plant structures.",
-          list: ["Warehouses and workshops", "Barns and agricultural buildings", "In-Plant corridors and platforms", "Pavilions and roof structures"]
+          list: ["Warehouses and workshops", "Barns and agricultural buildings", "Internal plant walkways and platforms", "Amenity buildings and roof structures"]
         }
       },
       seeRelated: "Projects in this field",
@@ -249,7 +249,7 @@
       aboutTitle: "About Us",
       about: [
         "We are Vektörel Yapı Proje Mühendislik, a structural design and engineering firm based in İzmir, Türkiye. We prepare structural calculations and construction drawings for concrete and steel structures and provide engineering support to contractors at tender stage. Our deepest specialism is water-retaining structures and treatment plants.",
-        "In Türkiye we work on municipal, industrial-zone and industrial plant projects; in Libya and Iraq, on plant projects with contractors and process engineering firms. For water-retaining structures we design for seismic action, hydrodynamic pressure and crack control to the relevant Turkish and international codes.",
+        "In Türkiye, we work on municipal, industrial-zone and industrial plant projects; in Libya and Iraq, on plant projects with contractors and process engineering firms. For water-retaining structures, we design for seismic action, hydrodynamic pressure and crack control to the relevant Turkish and international codes.",
         "We check the structural model, the calculations and the construction drawings against one another at every stage. We coordinate with geotechnical, architectural and process disciplines and support our design through construction."
       ],
       aboutPending: ["Founder photo", "Years of practice and background", "Chamber registration number (if you want it shown)"],
