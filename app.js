@@ -312,6 +312,138 @@
     }
   };
 
+  // Arapça (Faz 3, 16.11.2026). Metinler ceviri/arapca.md'den (Claude yazdı, Gemini kontrol etti, Burak'ın 4 kararı).
+  // Kurallar: Modern Standart Arapça, Batı rakamları, firma adı Latin harfle, teknik terimlerde ayraç içinde İngilizcesi.
+  // WhatsApp hazır mesajları İngilizce kalır: Burak Arapça yazışmıyor (karar K4); mesaj ona okunur biçimde gelsin.
+  // Gizlilik sayfası Arapçaya çevrilmez; Arapça sayfalardaki bağlantı İngilizce metne gider.
+  T.ar = {
+    nav: { home: "الرئيسية", services: "خدماتنا", projects: "المشاريع", about: "من نحن", contact: "اتصل بنا" },
+    draft: "نسخة معاينة، غير منشورة.",
+    metaDesc: "التصميم الإنشائي للمنشآت الخرسانية والفولاذية. تخصصنا المنشآت الحاوية للمياه ومحطات المعالجة. تركيا، ليبيا، العراق.",
+    heroTitle: "التصميم الإنشائي للمنشآت الخرسانية والفولاذية",
+    heroLead: "تخصصنا المنشآت الحاوية للمياه ومحطات المعالجة. تركيا، ليبيا، العراق.",
+    seeProjects: "استعرض المشاريع",
+    whatsapp: "راسلنا عبر واتساب",
+    heroCaption: "محطة معالجة مياه الصرف الصحي في سلوق، ليبيا · 12,000 م³/يوم · 25 منشأة",
+    stats: [["projects", "مشروعاً منجزاً"], ["countries", "دول: تركيا، ليبيا، العراق"], ["water", "مشروعاً في المعالجة والمنشآت الحاوية للمياه"]],
+    servicesTitle: "خدماتنا",
+    servicesLead: "من المباني السكنية والصناعية إلى محطات المعالجة، نُعدّ الحسابات الإنشائية والمخططات التنفيذية في ثلاثة مجالات.",
+    services: {
+      water: {
+        title: "محطات المعالجة والمنشآت الحاوية للمياه",
+        text: "نصمّم المنشآت الخرسانية المسلحة لمحطات معالجة مياه الصرف الصحي ومياه الشرب: الأحواض، ووحدات الترسيب والتهوية، والخزانات، ومباني المحطة. وفي مرحلة المناقصة نُعدّ للمقاولين جداول الكميات الإنشائية وتقدير التكلفة.",
+        list: ["أحواض التهوية والموازنة (Aeration & Equalization Basins)", "أحواض الترسيب الدائرية (Circular Clarifiers)", "خزانات مياه الشرب وخزانات العمليات", "جداول الكميات الإنشائية وتقدير التكلفة للمناقصات (BOQ)"]
+      },
+      rc: {
+        title: "منشآت الخرسانة المسلحة",
+        text: "نُعدّ الحسابات الإنشائية والمخططات التنفيذية للمباني السكنية والعامة والصناعية من الخرسانة المسلحة، وللأساسات والمنشآت الاستنادية. كما نُجري تقييم الأداء والتدعيم للمباني القائمة، والتدقيق المستقل لتصاميم المكاتب الأخرى.",
+        list: ["المباني السكنية والتجارية", "المدارس والمنشآت الصحية والمباني الإدارية", "المنشآت الصناعية ومباني الإنتاج", "مواقف السيارات والأقبية متعددة الطوابق", "الصوامع والمخازن الخرسانية (Silos & Bunkers)", "أساسات المعدات والآلات", "الأساسات الحصيرية والركائز (الخازوقية) والشريطية (Raft, Piled & Strip Foundations)", "الجدران الاستنادية وجدران الأقبية (Retaining Walls)", "التدعيم الإنشائي وتقييم الأداء (Strengthening & Performance Assessment)", "التدقيق المستقل للتصاميم الإنشائية (Independent Design Review)", "جداول الكميات وتقدير التكلفة"]
+      },
+      steel: {
+        title: "المنشآت الفولاذية",
+        text: "نُعدّ الحسابات الإنشائية والمخططات التنفيذية للهياكل الفولاذية في المستودعات والورش والمنشآت الزراعية والصناعية.",
+        list: ["المستودعات والورش", "الحظائر والمباني الزراعية", "الممرات والمنصات داخل المصانع", "مباني المرافق الخدمية والهياكل السقفية"]
+      }
+    },
+    seeRelated: "مشاريع هذا المجال",
+    approachTitle: "منهجية التصميم",
+    approachLead: "نصمّم لكل تأثير وفق الكود الذي ينظّمه. ونُجري التحليل ببرامج العناصر المحدودة المعتمدة دولياً، ونطبّق الكودات التركية أو الدولية بحسب موقع المشروع ومواصفاته.",
+    approachHead: ["التأثير أو التحقق", "الكود"],
+    codesLabel: "الكودات المعتمدة",
+    codesLead: "كودات تركية أو دولية بحسب موقع المشروع ومواصفاته",
+    codesMore: "التفاصيل",
+    approach: [
+      { title: "المنشآت الحاوية للمياه", rows: [
+        ["تصميم الخرسانة المسلحة", "TS 500 · TBDY 2018 / ACI 318-25 / ACI 350-06"],
+        ["التحكم في التشققات (Crack Control)", "BS 8007 / ACI 350-06"],
+        ["ضغط التربة", "TBDY 2018 / ACI 350.3"],
+        ["الضغط الهيدروديناميكي", "ACI 350.3"],
+        ["الأحمال الزلزالية", "TBDY 2018 / ASCE 7"],
+        ["الانقلاب والانزلاق", "TBDY 2018 / IBC"]
+      ] },
+      { title: "منشآت الخرسانة المسلحة", rows: [
+        ["التصميم الزلزالي", "TBDY 2018"],
+        ["الأحمال", "TS 498"],
+        ["تصميم المقاطع والتفاصيل الإنشائية", "TS 500 · TBDY 2018"],
+        ["المباني القائمة: تقييم الأداء والتدعيم", "TBDY 2018، الفصل 15"]
+      ] },
+      { title: "المنشآت الفولاذية", rows: [
+        ["التصميم الزلزالي", "TBDY 2018 / ASCE 7 · AISC 341"],
+        ["الأحمال", "TS 498 / ASCE 7"],
+        ["تصميم العناصر والوصلات", "ÇYTHYE 2018 / AISC 360"]
+      ] }
+    ],
+    featuredTitle: "مشاريع مرجعية",
+    allProjects: "جميع المشاريع",
+    ctaTitle: "اطلب عرض سعر للتصميم الإنشائي",
+    ctaText: "",
+    projectsTitle: "المشاريع",
+    projectsLead: function (n, m) { return arCount(n, "مشروع منجز", "مشروعان منجزان", "مشاريع منجزة", "مشروعاً منجزاً") + (m ? " و" + arCount(m, "مشروع واحد قيد التنفيذ", "مشروعان قيد التنفيذ", "مشاريع قيد التنفيذ", "مشروعاً قيد التنفيذ") : "") + ". الصور مأخوذة من النماذج الإنشائية والمناظير ثلاثية الأبعاد وصور المواقع."; },
+    filterAll: "الكل",
+    cats: { water: "المعالجة والمنشآت الحاوية للمياه", steel: "المنشآت الفولاذية", rc: "الخرسانة المسلحة" },
+    countries: { TR: "تركيا", LY: "ليبيا", IQ: "العراق" },
+    tender: "وثائق المناقصة",
+    empty: "لا توجد مشاريع ضمن هذا التصنيف.",
+    noImage: "الصورة قيد الإعداد",
+    back: "جميع المشاريع",
+    eyebrow: "التصميم الإنشائي · إزمير",
+    antetTitle: "بيانات المشروع",
+    askSimilar: "راسلنا بشأن مشروع مماثل",
+    relatedTitle: "مشاريع أخرى في هذا المجال",
+    facts: {
+      place: "الموقع", client: "المالك", contractor: "المقاول", scope: "نطاق العمل", country: "الدولة", category: "المجال",
+      capacity: "السعة", structures: "عدد المنشآت", plants: "عدد المحطات", codes: "الكودات",
+      delivered: "التسليم", bidder: "الشركة المتقدمة للمناقصة", result: "النتيجة", area: "المساحة",
+      steel: "الحديد الإنشائي", storeys: "عدد الطوابق", system: "النظام الإنشائي"
+    },
+    pendingTitle: "معلومات مطلوبة",
+    prev: "المشروع السابق", next: "المشروع التالي",
+    aboutTitle: "من نحن",
+    about: [
+      "نحن Vektörel Yapı Proje Mühendislik، مكتب للتصميم الإنشائي والخدمات الهندسية مقرّه إزمير، تركيا. نُعدّ الحسابات الإنشائية والمخططات التنفيذية للمنشآت الخرسانية والفولاذية، ونقدّم الدعم الهندسي للمقاولين في مرحلة المناقصة. وأبرز تخصصاتنا المنشآت الحاوية للمياه ومحطات المعالجة.",
+      "نعمل في تركيا على مشاريع البلديات والمناطق الصناعية والمنشآت الصناعية، وفي ليبيا والعراق على مشاريع المحطات مع المقاولين وشركات هندسة العمليات. وفي المنشآت الحاوية للمياه نحسب الأحمال الزلزالية والضغط الهيدروديناميكي ونتحقق من التشققات وفق الكودات التركية والدولية ذات الصلة.",
+      "نراجع النموذج الإنشائي والحسابات والمخططات التنفيذية ونطابقها مع بعضها في كل مرحلة. ونعمل بالتنسيق مع التخصصات الجيوتقنية والمعمارية وهندسة العمليات، وندعم تصاميمنا طوال مرحلة التنفيذ."
+    ],
+    aboutPending: [],
+    founder: "Burak Uçar",
+    founderRole: "مهندس مدني (ماجستير) · المؤسس، المهندس المصمم",
+    company: "Vektörel Yapı Proje Mühendislik İnşaat Sanayi ve Ticaret Ltd. Şti.",
+    companyLabel: "الاسم التجاري", locationLabel: "الموقع", location: "بايراكلي، إزمير، تركيا",
+    contactTitle: "اتصل بنا",
+    contactLead: "أرسلوا إلينا نطاق المشروع وموقعه وجدوله الزمني. نتواصل باللغتين الإنجليزية والتركية.",
+    mail: "البريد الإلكتروني", phone: "الهاتف", wa: "واتساب",
+    qTitle: "اطلب عرض سعر",
+    qLead: "املأ الحقول الثلاثة لتُفتح رسالتك جاهزة في واتساب. لا يحتفظ الموقع بأي بيانات.",
+    qPlace: "موقع المشروع", qPlaces: ["تركيا", "ليبيا", "العراق", "أخرى"],
+    qScope: "نوع المنشأة وسعتها", qScopeHint: "مثال: محطة معالجة مياه الصرف الصحي، 10,000 م³/يوم",
+    qDate: "موعد البدء المتوقع", qDateHint: "مثال: مارس 2027",
+    qSend: "اطلب عرض السعر",
+    statusDone: "منجز", statusOngoing: "قيد التنفيذ",
+    footerNote: "التصميم الإنشائي: المنشآت الخرسانية والفولاذية، والمنشآت الحاوية للمياه ومحطات المعالجة.",
+    langLabel: "اللغة",
+    privacyLink: "سياسة الخصوصية (بالإنجليزية)",
+    heroAlt: "موقع محطة معالجة مياه الصرف الصحي في سلوق من الجو",
+    showAll: "عرض جميع الصور",
+    unitProjects: function (n) { return arCount(n, "مشروع واحد", "مشروعان", "مشاريع", "مشروعاً"); },
+    unitStructures: "منشأة"
+  };
+  // Arapça sayfalarda WhatsApp mesajları ve gizlilik metni İngilizce (yukarıdaki not).
+  T.ar.waText = T.en.waText; T.ar.waSimilar = T.en.waSimilar; T.ar.qIntro = T.en.qIntro; T.ar.privacy = T.en.privacy;
+
+  // Arapça sayı-isim uyumu: 1 → tekil "واحد", 2 → ikil, 3–10 → çoğul, 11+ → tekil mansub (temyiz).
+  function arCount(n, one, two, few, many) {
+    if (n === 1) return one; if (n === 2) return two;
+    return n + " " + (n % 100 >= 3 && n % 100 <= 10 ? few : many);
+  }
+  // Künye değerleri "TR|EN|AR" yazılır; AR yoksa İngilizceden birim ve ay adları çevrilerek üretilir.
+  var AR_MONTHS = { January: "يناير", February: "فبراير", March: "مارس", April: "أبريل", May: "مايو", June: "يونيو", July: "يوليو", August: "أغسطس", September: "سبتمبر", October: "أكتوبر", November: "نوفمبر", December: "ديسمبر" };
+  function arAuto(s) {
+    return String(s)
+      .replace(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\b/g, function (m) { return AR_MONTHS[m]; })
+      .replace(/m³\/day/g, "م³/يوم").replace(/m³/g, "م³").replace(/m²/g, "م²")
+      .replace(/(\d)\s*m\b/g, "$1 م").replace(/(\d)\s*t$/, "$1 طن");
+  }
+
   var P = window.PROJECTS || [];
 
   // Sıra: biten işler teslim tarihine göre yeniden eskiye; tarihi olmayanlar en sonda.
@@ -346,8 +478,13 @@
     tr: { services: "hizmetler", projects: "projeler", about: "hakkinda", contact: "iletisim", privacy: "gizlilik", water: "aritma", steel: "celik", rc: "betonarme" },
     en: { services: "services", projects: "projects", about: "about", contact: "contact", privacy: "privacy", water: "water", steel: "steel", rc: "concrete" }
   };
+  SEG.ar = SEG.en; // /ar/services/, /ar/projects/suluq-aat/ …
+  // Dil düğmeleri. Yayında Arapça, Burak onaylayana kadar kapalı: build.js SITE.langs ile ["tr","en"] verir.
+  var LANGS = SITE.langs || ["tr", "en", "ar"];
   function pathFor(view, l) {
-    l = l || lang; var s = SEG[l], pre = l === "en" ? "/en" : "";
+    l = l || lang;
+    if (l === "ar" && view === "privacy") l = "en"; // gizlilik metni Arapçaya çevrilmedi
+    var s = SEG[l], pre = l === "tr" ? "" : "/" + l;
     if (!view || view === "home") return pre + "/";
     if (view.indexOf("projects-") === 0) return pre + "/" + s.projects + "/" + s[view.slice(9)] + "/";
     if (view.indexOf("p-") === 0) return pre + "/" + s.projects + "/" + view.slice(2) + "/";
@@ -358,17 +495,30 @@
   function t() { return T[lang]; }
   // Başlık yazımı: her kelime büyük harfle başlar; "ve", "and", "of" küçük kalır (Burak'ın kararı, 16.11.2026).
   var SMALL = { tr: ["ve"], en: ["and", "of"] };
-  function TC(s) { var loc = lang === "en" ? "en" : "tr"; return String(s == null ? "" : s).split(" ").map(function (w, i) { var lw = w.toLocaleLowerCase(loc); if (i > 0 && SMALL[loc].indexOf(lw) > -1) return lw; var k = w.search(/\p{L}/u); return k < 0 ? w : w.slice(0, k) + w.charAt(k).toLocaleUpperCase(loc) + w.slice(k + 1); }).join(" "); }
+  function TC(s) { if (lang === "ar") return String(s == null ? "" : s); var loc = lang === "en" ? "en" : "tr"; return String(s == null ? "" : s).split(" ").map(function (w, i) { var lw = w.toLocaleLowerCase(loc); if (i > 0 && SMALL[loc].indexOf(lw) > -1) return lw; var k = w.search(/\p{L}/u); return k < 0 ? w : w.slice(0, k) + w.charAt(k).toLocaleUpperCase(loc) + w.slice(k + 1); }).join(" "); }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function L(v) { if (v == null) return ""; if (typeof v === "object") return v[lang] || v.tr || ""; var s = String(v); if (s.indexOf("|") > -1) { var p = s.split("|"); return lang === "en" ? p[1] : p[0]; } return s; }
-  function href(view) { if (STATIC) return pathFor(view); if (lang === "en") return "#" + (view ? "en-" + view : "en"); return "#" + (view || "home"); }
+  // Çok dilli değer: {tr, en, ar} nesnesi ya da "TR|EN|AR" metni. Arapçası yoksa İngilizcesi (birim ve aylar çevrilerek).
+  function L(v) {
+    if (v == null) return "";
+    if (typeof v === "object") return v[lang] || (lang === "ar" ? v.en : "") || v.tr || "";
+    var s = String(v), p = s.split("|");
+    if (lang === "ar") return p[2] || arAuto(p[1] || p[0]);
+    return p.length > 1 && lang === "en" ? p[1] : p[0];
+  }
+  function href(view, l) {
+    l = l || lang;
+    if (STATIC) return pathFor(view, l);
+    if (l === "ar" && view === "privacy") l = "en";
+    if (l !== "tr") return "#" + (view ? l + "-" + view : l);
+    return "#" + (view || "home");
+  }
   function waLink(text) { return "https://wa.me/" + WA + "?text=" + encodeURIComponent(text || t().waText); }
   function img(p) { return (STATIC ? "/img/" : "img/") + p; }
   function factVal(p, key) { for (var i = 0; i < p.facts.length; i++) if (p.facts[i][0] === key) return L(p.facts[i][1]); return ""; }
   function keyFact(p) {
     var v = factVal(p, "capacity"); if (v) return v;
     v = factVal(p, "area"); if (v) return v;
-    v = factVal(p, "structures"); if (v) return v + " " + (lang === "en" ? "structures" : "yapı");
+    v = factVal(p, "structures"); if (v) return v + " " + (lang === "en" ? "structures" : lang === "ar" ? t().unitStructures : "yapı");
     return L(p.scope) || "";
   }
   function year(p) { return p.year || ""; }
@@ -420,7 +570,7 @@
       var rel = P.filter(function (p) { return p.cat === k; });
       var simg = { water: ["suluq-12.jpg", ""], rc: ["k1-1.jpg", " is-model"], steel: ["novart-1.jpg", " is-model"] }[k];
       var body = '<article class="service" id="svc-' + k + '"><div class="media svc-img' + simg[1] + '"><img loading="lazy" src="' + img(simg[0]) + '" alt=""></div>' +
-        '<div class="svc-no">0' + (n + 1) + '<span class="num">' + rel.length + " " + (lang === "en" ? "projects" : "proje") + "</span></div>" +
+        '<div class="svc-no">0' + (n + 1) + '<span class="num">' + (lang === "ar" ? x.unitProjects(rel.length) : rel.length + " " + (lang === "en" ? "projects" : "proje")) + "</span></div>" +
         "<h3>" + esc(TC(s.title)) + "</h3><p>" + esc(s.text) + "</p>";
       if (full) {
         body += "<ul>" + s.list.map(function (li) { return "<li>" + esc(TC(li)) + "</li>"; }).join("") + "</ul>";
@@ -468,7 +618,7 @@
   function viewHome() {
     var x = t(), c = counts();
     var featured = P.filter(function (p) { return p.featured; }).sort(function (a, b) { return a.featured - b.featured; });
-    return '<section class="hero"><img class="hero-img" src="' + img("suluq-7.jpg") + '" alt="' + esc(lang === "en" ? "Suluq wastewater treatment plant site from the air" : "Suluq atıksu arıtma tesisi şantiyesi, havadan") + '"><div class="scrim"></div>' +
+    return '<section class="hero"><img class="hero-img" src="' + img("suluq-7.jpg") + '" alt="' + esc(x.heroAlt || (lang === "en" ? "Suluq wastewater treatment plant site from the air" : "Suluq atıksu arıtma tesisi şantiyesi, havadan")) + '"><div class="scrim"></div>' +
       '<div class="wrap hero-body"><div class="eyebrow label">' + esc(x.eyebrow) + "</div>" +
       "<h1>" + esc(TC(x.heroTitle)) + '</h1><p class="lead">' + esc(x.heroLead) + "</p>" +
       '<div class="actions"><a class="btn btn-accent" href="' + href("projects") + '">' + esc(TC(x.seeProjects)) + '</a><a class="btn btn-ghost" href="' + waLink() + '" target="_blank" rel="noopener">' + esc(TC(x.whatsapp)) + "</a></div>" +
@@ -537,7 +687,7 @@
         // 8'den fazla görselde ilk 7 küçük resim görünür, sonuncusu "+N" düğmesiyle açılır.
         (p.images.length > 1 ? '<div class="g-thumbs' + (p.images.length > 8 ? " collapsed" : "") + '">' + p.images.map(function (im, n) {
           return '<button type="button" class="g-thumb media' + (im.fit === "contain" ? " is-model" : "") + (n === 0 ? " on" : "") + '" data-src="' + img(im.src) + '" data-alt="' + esc(L(im.alt)) + '" data-fit="' + (im.fit || "") + '" aria-label="' + esc(L(im.alt)) + '"><img loading="lazy" src="' + img(im.src) + '" alt=""></button>';
-        }).join("") + (p.images.length > 8 ? '<button type="button" class="g-more num" aria-label="' + esc(lang === "en" ? "Show all images" : "Tüm görselleri göster") + '">+' + (p.images.length - 7) + "</button>" : "") + "</div>" : "") + "</div>";
+        }).join("") + (p.images.length > 8 ? '<button type="button" class="g-more num" aria-label="' + esc(x.showAll || (lang === "en" ? "Show all images" : "Tüm görselleri göster")) + '">+' + (p.images.length - 7) + "</button>" : "") + "</div>" : "") + "</div>";
     } else {
       gallery = '<div class="gallery">' + thumb(p, "g-main") + "</div>";
     }
@@ -561,7 +711,7 @@
       '<section class="block block-tight"><div class="wrap about-grid"><div class="prose">' + x.about.map(function (s) { return "<p>" + esc(s) + "</p>"; }).join("") + "</div>" +
       '<aside><div class="person"><div class="person-ph" aria-hidden="true">BU</div><div><strong>' + esc(x.founder) + "</strong><span>" + esc(x.founderRole) + "</span></div></div>" +
       '<table class="tblock"><tbody><tr><th scope="row">' + esc(x.companyLabel) + "</th><td>" + esc(x.company) + '</td></tr><tr><th scope="row">' + esc(x.locationLabel) + "</th><td>" + esc(x.location) + "</td></tr></tbody></table>" +
-      '<div class="pending"><strong>' + esc(x.pendingTitle) + "</strong><ul>" + x.aboutPending.map(function (q) { return "<li>" + esc(q) + "</li>"; }).join("") + "</ul></div></aside></div></section>" +
+      (x.aboutPending.length ? '<div class="pending"><strong>' + esc(x.pendingTitle) + "</strong><ul>" + x.aboutPending.map(function (q) { return "<li>" + esc(q) + "</li>"; }).join("") + "</ul></div>" : "") + "</aside></div></section>" +
       codesStrip();
   }
 
@@ -599,7 +749,7 @@
       nav: nav.map(function (n) { return '<a href="' + href(n[0]) + '" data-v="' + n[0] + '"' + (n[0] === active ? ' class="on"' : "") + ">" + esc(n[1]) + "</a>"; }).join(""),
       home: href(""),
       langLabel: x.langLabel,
-      lang: ["tr", "en"].map(function (l) { return '<button type="button" data-lang="' + l + '" aria-pressed="' + (l === lang) + '">' + l.toUpperCase() + "</button>"; }).join(""),
+      lang: LANGS.map(function (l) { return '<button type="button" data-lang="' + l + '" lang="' + l + '" aria-pressed="' + (l === lang) + '">' + (l === "ar" ? "عربي" : l.toUpperCase()) + "</button>"; }).join(""),
       fnote: esc(x.footerNote),
       fcompany: esc(x.company),
       flinks: nav.map(function (n) { return '<a href="' + href(n[0]) + '">' + esc(n[1]) + "</a>"; }).join("") + '<a href="' + href("privacy") + '">' + esc(x.privacyLink) + '</a><a href="mailto:' + MAIL + '">' + MAIL + "</a>" +
@@ -610,6 +760,7 @@
   function renderChrome() {
     var c = chromeParts();
     document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     document.getElementById("draft").textContent = c.draft;
     document.getElementById("nav").innerHTML = c.nav;
     document.getElementById("home-link").setAttribute("href", c.home);
@@ -622,10 +773,10 @@
   }
 
   function parse() {
-    if (STATIC) { lang = SITE.lang === "en" ? "en" : "tr"; return SITE.view || ""; }
+    if (STATIC) { lang = T[SITE.lang] ? SITE.lang : "tr"; return SITE.view || ""; }
     var h = (location.hash || "").replace(/^#/, "");
     lang = "tr";
-    if (h === "en" || h.indexOf("en-") === 0) { lang = "en"; h = h === "en" ? "" : h.slice(3); }
+    ["en", "ar"].forEach(function (l) { if (h === l || h.indexOf(l + "-") === 0) { lang = l; h = h === l ? "" : h.slice(3); } });
     if (h === "home") h = "";
     return h;
   }
@@ -703,8 +854,7 @@
     if (b) {
       var v = parse(), want = b.getAttribute("data-lang");
       if (STATIC) { location.href = pathFor(v, want); return; }
-      var h = (want === "en" ? "en-" : "") + v;
-      location.hash = h || "home";
+      location.hash = want === "tr" ? (v || "home") : want + (v ? "-" + v : "");
       return;
     }
     var f = e.target.closest("[data-f]");
@@ -734,8 +884,9 @@
     var f = e.target;
     if (f.id !== "qform") return;
     e.preventDefault();
-    var x = t();
-    var lines = [x.qIntro, x.qPlace + ": " + f.place.value];
+    // Arapça sayfada mesaj İngilizce kurulur (Burak Arapça yazışmıyor); seçilen ülke de İngilizce adıyla.
+    var x = lang === "ar" ? T.en : t();
+    var lines = [x.qIntro, x.qPlace + ": " + (x.qPlaces[f.place.selectedIndex] || f.place.value)];
     if (f.scope.value.trim()) lines.push(x.qScope + ": " + f.scope.value.trim());
     if (f.date.value.trim()) lines.push(x.qDate + ": " + f.date.value.trim());
     window.open(waLink(lines.join("\n")), "_blank", "noopener");

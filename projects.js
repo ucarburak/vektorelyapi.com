@@ -20,8 +20,8 @@
 window.PROJECTS = [
   {
     slug: "yenikapi-baat", status: "ongoing", cat: "water", kind: "design", country: "TR",
-    title: { tr: "Yenikapı Biyolojik Atıksu Arıtma Tesisi", en: "Yenikapı Biological Wastewater Treatment Plant" },
-    place: { tr: "Yenikapı, İstanbul", en: "Yenikapı, Istanbul" },
+    title: { tr: "Yenikapı Biyolojik Atıksu Arıtma Tesisi", en: "Yenikapı Biological Wastewater Treatment Plant", ar: "محطة ينيكابي البيولوجية لمعالجة مياه الصرف الصحي" },
+    place: { tr: "Yenikapı, İstanbul", en: "Yenikapı, Istanbul", ar: "ينيكابي، إسطنبول" },
     facts: [],
     pending: [{ tr: "Künye bekleniyor (kapasite, yapı sayısı, kapsam, takvim)", en: "Project data to follow (capacity, structures, scope, schedule)" }],
     images: [
@@ -35,9 +35,9 @@ window.PROJECTS = [
   },
   {
     slug: "suluq-aat", status: "done", cat: "water", kind: "design", country: "LY", featured: 1,
-    title: { tr: "Suluq Atıksu Arıtma Tesisi", en: "Suluq Wastewater Treatment Plant" },
-    place: { tr: "Suluq, Libya", en: "Suluq, Libya" },
-    scope: { tr: "Mevcut proje revizyonları", en: "Revisions to the existing design" },
+    title: { tr: "Suluq Atıksu Arıtma Tesisi", en: "Suluq Wastewater Treatment Plant", ar: "محطة معالجة مياه الصرف الصحي في سلوق" },
+    place: { tr: "Suluq, Libya", en: "Suluq, Libya", ar: "سلوق، ليبيا" },
+    scope: { tr: "Mevcut proje revizyonları", en: "Revisions to the existing design", ar: "تعديلات على التصميم القائم" },
     facts: [
       ["capacity", "12.000 m³/gün|12,000 m³/day"],
       ["structures", "25"],
@@ -64,14 +64,14 @@ window.PROJECTS = [
   },
   {
     slug: "al-bayda-ihale", status: "done", cat: "water", kind: "tender", country: "LY", featured: 2,
-    title: { tr: "Al Bayda AAT İhale Dosyası", en: "Al Bayda WWTP Tender Design" },
-    place: { tr: "Al Bayda, Libya", en: "Al Bayda, Libya" },
-    scope: { tr: "Atıksu arıtma tesisleri ihale dosyası hazırlanması", en: "Structural tender documentation for wastewater treatment plants" },
+    title: { tr: "Al Bayda AAT İhale Dosyası", en: "Al Bayda WWTP Tender Design", ar: "وثائق مناقصة محطات معالجة مياه الصرف الصحي في البيضاء" },
+    place: { tr: "Al Bayda, Libya", en: "Al Bayda, Libya", ar: "البيضاء، ليبيا" },
+    scope: { tr: "Atıksu arıtma tesisleri ihale dosyası hazırlanması", en: "Structural tender documentation for wastewater treatment plants", ar: "إعداد الوثائق الإنشائية لمناقصة محطات معالجة مياه الصرف الصحي" },
     facts: [
       ["capacity", "25.000 + 75.000 + 100.000 m³/gün|25,000 + 75,000 + 100,000 m³/day"],
       ["plants", "3"],
       ["bidder", "Set Construction / Timtaş"],
-      ["result", "Firma ihaleyi kazandı|Contract awarded to the bidder"],
+      ["result", "Firma ihaleyi kazandı|Contract awarded to the bidder|فازت الشركة بالمناقصة"],
       ["delivered", "Aralık 2025|December 2025"]
     ],
     year: 2025,
@@ -83,8 +83,8 @@ window.PROJECTS = [
   },
   {
     slug: "suluq-temiz-su-tanki", status: "done", cat: "water", kind: "design", country: "LY",
-    title: { tr: "Suluq Temiz Su Deposu ve Pompa İstasyonu", en: "Suluq Clean Water Reservoir and Pump Station" },
-    place: { tr: "Suluq, Libya", en: "Suluq, Libya" },
+    title: { tr: "Suluq Temiz Su Deposu ve Pompa İstasyonu", en: "Suluq Clean Water Reservoir and Pump Station", ar: "خزان مياه الشرب ومحطة الضخ في سلوق" },
+    place: { tr: "Suluq, Libya", en: "Suluq, Libya", ar: "سلوق، ليبيا" },
     facts: [
       ["capacity", "20.000 m³|20,000 m³"],
       ["contractor", "Set Construction / Timtaş"],
@@ -99,8 +99,8 @@ window.PROJECTS = [
   },
   {
     slug: "halepce-aat", status: "done", cat: "water", kind: "design", country: "IQ", featured: 4,
-    title: { tr: "Halepçe Atıksu Arıtma Tesisi", en: "Halabja Wastewater Treatment Plant" },
-    place: { tr: "Halepçe, Irak", en: "Halabja, Iraq" },
+    title: { tr: "Halepçe Atıksu Arıtma Tesisi", en: "Halabja Wastewater Treatment Plant", ar: "محطة معالجة مياه الصرف الصحي في حلبجة" },
+    place: { tr: "Halepçe, Irak", en: "Halabja, Iraq", ar: "حلبجة، العراق" },
     client: "Halabja Group",
     facts: [
       ["capacity", "800 m³/gün|800 m³/day"],
@@ -120,8 +120,8 @@ window.PROJECTS = [
   },
   {
     slug: "irak-aat", status: "done", cat: "water", kind: "design", country: "IQ",
-    title: { tr: "Basra Atıksu Arıtma Tesisi", en: "Basra Wastewater Treatment Plant" },
-    place: { tr: "Basra, Irak", en: "Basra, Iraq" },
+    title: { tr: "Basra Atıksu Arıtma Tesisi", en: "Basra Wastewater Treatment Plant", ar: "محطة معالجة مياه الصرف الصحي في البصرة" },
+    place: { tr: "Basra, Irak", en: "Basra, Iraq", ar: "البصرة، العراق" },
     facts: [
       ["capacity", "155.000 m³/gün|155,000 m³/day"],
       ["delivered", "Kasım 2025|November 2025"]
@@ -136,14 +136,14 @@ window.PROJECTS = [
   },
   {
     slug: "iski-5-aat-ihale", status: "done", cat: "water", kind: "tender", country: "TR",
-    title: { tr: "İSKİ 5 Adet AAT İhale Dosyası", en: "İSKİ Five-Plant WWTP Tender Design" },
-    place: { tr: "Bozhane, Kilyos, Koçullu, Reşadiye, Riva — İstanbul", en: "Bozhane, Kilyos, Koçullu, Reşadiye, Riva — Istanbul" },
-    scope: { tr: "Atıksu arıtma tesisleri ihale dosyası hazırlanması", en: "Structural tender documentation for wastewater treatment plants" },
+    title: { tr: "İSKİ 5 Adet AAT İhale Dosyası", en: "İSKİ Five-Plant WWTP Tender Design", ar: "وثائق مناقصة خمس محطات لمعالجة مياه الصرف الصحي لإدارة المياه في إسطنبول (İSKİ)" },
+    place: { tr: "Bozhane, Kilyos, Koçullu, Reşadiye, Riva — İstanbul", en: "Bozhane, Kilyos, Koçullu, Reşadiye, Riva — Istanbul", ar: "بوزهانه، كيليوس، كوتشوللو، رشادية، ريفا — إسطنبول" },
+    scope: { tr: "Atıksu arıtma tesisleri ihale dosyası hazırlanması", en: "Structural tender documentation for wastewater treatment plants", ar: "إعداد الوثائق الإنشائية لمناقصة محطات معالجة مياه الصرف الصحي" },
     facts: [
       ["capacity", "52.000 m³/gün|52,000 m³/day"],
       ["plants", "5"],
       ["bidder", "Kontrolmatik Teknoloji Enerji ve Mühendislik"],
-      ["result", "Firma ihaleyi kazandı|Contract awarded to the bidder"],
+      ["result", "Firma ihaleyi kazandı|Contract awarded to the bidder|فازت الشركة بالمناقصة"],
       ["delivered", "Nisan 2025|April 2025"]
     ],
     year: 2025,
@@ -151,8 +151,8 @@ window.PROJECTS = [
   },
   {
     slug: "usak-dkosb", status: "done", cat: "water", kind: "design", country: "TR",
-    title: { tr: "Uşak Deri Karma OSB Atıksu Geri Kazanım Tesisi", en: "Uşak Leather OIZ Wastewater Recovery Plant" },
-    place: { tr: "Uşak", en: "Uşak, Türkiye" },
+    title: { tr: "Uşak Deri Karma OSB Atıksu Geri Kazanım Tesisi", en: "Uşak Leather OIZ Wastewater Recovery Plant", ar: "محطة استرداد مياه الصرف في المنطقة الصناعية للجلود في أوشاك" },
+    place: { tr: "Uşak", en: "Uşak, Türkiye", ar: "أوشاك، تركيا" },
     facts: [
       ["structures", "2"],
       ["codes", "ACI · BS · TBDY 2018"],
@@ -168,9 +168,9 @@ window.PROJECTS = [
   },
   {
     slug: "kutahya-osb-aat", status: "done", cat: "water", kind: "design", country: "TR",
-    title: { tr: "Kütahya OSB Atıksu Arıtma Tesisi", en: "Kütahya OIZ Wastewater Treatment Plant" },
-    place: { tr: "Kütahya", en: "Kütahya, Türkiye" },
-    scope: { tr: "İnşaat işleri statik projesi", en: "Structural design for civil works" },
+    title: { tr: "Kütahya OSB Atıksu Arıtma Tesisi", en: "Kütahya OIZ Wastewater Treatment Plant", ar: "محطة معالجة مياه الصرف الصحي في المنطقة الصناعية بكوتاهيا" },
+    place: { tr: "Kütahya", en: "Kütahya, Türkiye", ar: "كوتاهيا، تركيا" },
+    scope: { tr: "İnşaat işleri statik projesi", en: "Structural design for civil works", ar: "التصميم الإنشائي للأعمال المدنية" },
     facts: [
       ["capacity", "15.000 m³/gün|15,000 m³/day"],
       ["structures", "8"],
@@ -188,8 +188,8 @@ window.PROJECTS = [
   },
   {
     slug: "manisa-uzunburun", status: "done", cat: "water", kind: "design", country: "TR",
-    title: { tr: "Uzunburun Katı Atık Tesisi Havalandırma Havuzu", en: "Uzunburun Solid Waste Facility Aeration Basin" },
-    place: { tr: "Manisa", en: "Manisa, Türkiye" },
+    title: { tr: "Uzunburun Katı Atık Tesisi Havalandırma Havuzu", en: "Uzunburun Solid Waste Facility Aeration Basin", ar: "حوض التهوية في منشأة أوزونبورون للنفايات الصلبة" },
+    place: { tr: "Manisa", en: "Manisa, Türkiye", ar: "مانيسا، تركيا" },
     client: "Manisa Büyükşehir Belediyesi",
     facts: [
       ["capacity", "500 m³/gün|500 m³/day"],
@@ -207,8 +207,8 @@ window.PROJECTS = [
   },
   {
     slug: "balikesir-osb-aat", status: "done", cat: "water", kind: "design", country: "TR",
-    title: { tr: "Balıkesir OSB Atıksu Arıtma Tesisi İlave Yapılar", en: "Balıkesir OIZ WWTP Additional Structures" },
-    place: { tr: "Balıkesir", en: "Balıkesir, Türkiye" },
+    title: { tr: "Balıkesir OSB Atıksu Arıtma Tesisi İlave Yapılar", en: "Balıkesir OIZ WWTP Additional Structures", ar: "منشآت إضافية لمحطة معالجة مياه الصرف الصحي في المنطقة الصناعية بباليكسير" },
+    place: { tr: "Balıkesir", en: "Balıkesir, Türkiye", ar: "باليكسير، تركيا" },
     facts: [
       ["capacity", "10.000 m³/gün|10,000 m³/day"],
       ["structures", "5"],
@@ -226,8 +226,8 @@ window.PROJECTS = [
   },
   {
     slug: "anadolu-efes-cumra", status: "done", cat: "water", kind: "design", country: "TR",
-    title: { tr: "Anadolu Efes Çumra Tesisi İlave Yapılar", en: "Anadolu Efes Çumra Plant Additional Structures" },
-    place: { tr: "Çumra, Konya", en: "Çumra, Konya, Türkiye" },
+    title: { tr: "Anadolu Efes Çumra Tesisi İlave Yapılar", en: "Anadolu Efes Çumra Plant Additional Structures", ar: "منشآت إضافية لمصنع Anadolu Efes في تشومرا" },
+    place: { tr: "Çumra, Konya", en: "Çumra, Konya, Türkiye", ar: "تشومرا، قونية، تركيا" },
     client: "Anadolu Efes",
     facts: [
       ["capacity", "1.200 m³/gün|1,200 m³/day"],
@@ -245,8 +245,8 @@ window.PROJECTS = [
   },
   {
     slug: "gonenli-akhisar-aat", status: "done", cat: "water", kind: "design", country: "TR",
-    title: { tr: "Gönenli Süt Akhisar Atıksu Arıtma Tesisi", en: "Gönenli Dairy Akhisar Wastewater Treatment Plant" },
-    place: { tr: "Akhisar, Manisa", en: "Akhisar, Manisa, Türkiye" },
+    title: { tr: "Gönenli Süt Akhisar Atıksu Arıtma Tesisi", en: "Gönenli Dairy Akhisar Wastewater Treatment Plant", ar: "محطة معالجة مياه الصرف لمصنع ألبان Gönenli في آق حصار" },
+    place: { tr: "Akhisar, Manisa", en: "Akhisar, Manisa, Türkiye", ar: "آق حصار، مانيسا، تركيا" },
     client: "Gönenli Süt ve Süt Ürünleri A.Ş.",
     facts: [
       ["capacity", "3.500 m³/gün|3,500 m³/day"],
@@ -264,8 +264,8 @@ window.PROJECTS = [
   },
   {
     slug: "mey-icki-alasehir", status: "done", cat: "water", kind: "design", country: "TR",
-    title: { tr: "Mey İçki Alaşehir Tesisi İlave Yapılar", en: "Mey İçki Alaşehir Plant Additional Structures" },
-    place: { tr: "Alaşehir, Manisa", en: "Alaşehir, Manisa, Türkiye" },
+    title: { tr: "Mey İçki Alaşehir Tesisi İlave Yapılar", en: "Mey İçki Alaşehir Plant Additional Structures", ar: "منشآت إضافية لمصنع Mey İçki في آلاشهير" },
+    place: { tr: "Alaşehir, Manisa", en: "Alaşehir, Manisa, Türkiye", ar: "آلاشهير، مانيسا، تركيا" },
     client: "Mey İçki",
     facts: [
       ["structures", "2"],
@@ -279,10 +279,10 @@ window.PROJECTS = [
   },
   {
     slug: "novart-atolye", status: "done", cat: "steel", kind: "design", country: "TR", featured: 3,
-    title: { tr: "Novart Uzay Teknolojileri Atölye Yapısı", en: "Novart Space Technologies Workshop" },
-    place: { tr: "Teknopark İstanbul", en: "Teknopark Istanbul" },
+    title: { tr: "Novart Uzay Teknolojileri Atölye Yapısı", en: "Novart Space Technologies Workshop", ar: "ورشة Novart لتقنيات الفضاء" },
+    place: { tr: "Teknopark İstanbul", en: "Teknopark Istanbul", ar: "تكنوبارك إسطنبول" },
     client: "Novart Uzay Teknolojileri A.Ş.",
-    scope: { tr: "Çelik konstrüksiyon atölye yapısı", en: "Structural steel workshop building" },
+    scope: { tr: "Çelik konstrüksiyon atölye yapısı", en: "Structural steel workshop building", ar: "مبنى ورشة بهيكل فولاذي" },
     facts: [["delivered", "Eylül 2026|September 2026"]],
     year: 2026,
     images: [
@@ -292,9 +292,9 @@ window.PROJECTS = [
   },
   {
     slug: "sisecam-yangin-koridoru", status: "done", cat: "steel", kind: "design", country: "TR", featured: 5,
-    title: { tr: "Şişecam Kırklareli Yangın Koridoru", en: "Şişecam Kırklareli Fire Escape Corridor" },
-    place: { tr: "Şişecam Düzcam Kırklareli Fabrikaları", en: "Şişecam Flat Glass Plant, Kırklareli" },
-    scope: { tr: "Çelik konstrüksiyon yangın koridoru", en: "Structural steel fire escape corridor" },
+    title: { tr: "Şişecam Kırklareli Yangın Koridoru", en: "Şişecam Kırklareli Fire Escape Corridor", ar: "ممر الهروب من الحريق في مصنع Şişecam بكيركلاريلي" },
+    place: { tr: "Şişecam Düzcam Kırklareli Fabrikaları", en: "Şişecam Flat Glass Plant, Kırklareli", ar: "مصانع Şişecam للزجاج المسطح، كيركلاريلي" },
+    scope: { tr: "Çelik konstrüksiyon yangın koridoru", en: "Structural steel fire escape corridor", ar: "ممر هروب من الحريق بهيكل فولاذي" },
     facts: [["contractor", "Alkataş İnşaat ve Taahhüt A.Ş."], ["delivered", "Aralık 2025|December 2025"]],
     year: 2025,
     images: [
@@ -305,9 +305,9 @@ window.PROJECTS = [
   },
   {
     slug: "sisecam-ambar-cephe", status: "done", cat: "steel", kind: "design", country: "TR",
-    title: { tr: "Şişecam Kırklareli Ambar Cephe Kolonları", en: "Şişecam Kırklareli Warehouse Façade Columns" },
-    place: { tr: "Şişecam Düzcam Kırklareli Fabrikaları", en: "Şişecam Flat Glass Plant, Kırklareli" },
-    scope: { tr: "Ambar cephesi çelik kolonları", en: "Steel columns for the warehouse façade" },
+    title: { tr: "Şişecam Kırklareli Ambar Cephe Kolonları", en: "Şişecam Kırklareli Warehouse Façade Columns", ar: "أعمدة واجهة المستودع في مصنع Şişecam بكيركلاريلي" },
+    place: { tr: "Şişecam Düzcam Kırklareli Fabrikaları", en: "Şişecam Flat Glass Plant, Kırklareli", ar: "مصانع Şişecam للزجاج المسطح، كيركلاريلي" },
+    scope: { tr: "Ambar cephesi çelik kolonları", en: "Steel columns for the warehouse façade", ar: "أعمدة فولاذية لواجهة المستودع" },
     facts: [["contractor", "Alkataş İnşaat ve Taahhüt A.Ş."], ["delivered", "Aralık 2024|December 2024"]],
     year: 2024,
     images: [
@@ -317,9 +317,9 @@ window.PROJECTS = [
   },
   {
     slug: "sisecam-ag-kosk-temeli", status: "done", cat: "rc", kind: "design", country: "TR",
-    title: { tr: "Şişecam Kırklareli AG Köşk Temeli", en: "Şişecam Kırklareli LV Kiosk Foundation" },
-    place: { tr: "Şişecam Düzcam Kırklareli Fabrikaları", en: "Şişecam Flat Glass Plant, Kırklareli" },
-    scope: { tr: "Alçak gerilim köşkü için betonarme temel", en: "Reinforced concrete foundation for a low-voltage kiosk" },
+    title: { tr: "Şişecam Kırklareli AG Köşk Temeli", en: "Şişecam Kırklareli LV Kiosk Foundation", ar: "أساس غرفة الجهد المنخفض في مصنع Şişecam بكيركلاريلي" },
+    place: { tr: "Şişecam Düzcam Kırklareli Fabrikaları", en: "Şişecam Flat Glass Plant, Kırklareli", ar: "مصانع Şişecam للزجاج المسطح، كيركلاريلي" },
+    scope: { tr: "Alçak gerilim köşkü için betonarme temel", en: "Reinforced concrete foundation for a low-voltage kiosk", ar: "أساس من الخرسانة المسلحة لغرفة جهد منخفض" },
     facts: [["contractor", "Alkataş İnşaat ve Taahhüt A.Ş."], ["delivered", "Mayıs 2025|May 2025"]],
     year: 2025,
     images: [
@@ -329,9 +329,9 @@ window.PROJECTS = [
   },
   {
     slug: "sisecam-catalca-vinc-temeli", status: "done", cat: "rc", kind: "design", country: "TR",
-    title: { tr: "Şişecam Çatalca Vinç Temeli", en: "Şişecam Çatalca Crane Foundation" },
-    place: { tr: "Çatalca, İstanbul", en: "Çatalca, İstanbul, Türkiye" },
-    scope: { tr: "Vinç için betonarme temel", en: "Reinforced concrete foundation for a crane" },
+    title: { tr: "Şişecam Çatalca Vinç Temeli", en: "Şişecam Çatalca Crane Foundation", ar: "أساس الرافعة في مصنع Şişecam بتشاتالجا" },
+    place: { tr: "Çatalca, İstanbul", en: "Çatalca, İstanbul, Türkiye", ar: "تشاتالجا، إسطنبول" },
+    scope: { tr: "Vinç için betonarme temel", en: "Reinforced concrete foundation for a crane", ar: "أساس من الخرسانة المسلحة لرافعة" },
     facts: [["contractor", "Alkataş İnşaat ve Taahhüt A.Ş."], ["delivered", "Mart 2023|March 2023"]],
     year: 2023,
     images: [
@@ -340,9 +340,9 @@ window.PROJECTS = [
   },
   {
     slug: "haci-omerli-mesire", status: "done", cat: "steel", kind: "design", country: "TR",
-    title: { tr: "Hacı Ömerli Mesire Alanı Sosyal Tesis", en: "Hacı Ömerli Recreation Area Amenity Building" },
-    place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye" },
-    scope: { tr: "Çelik konstrüksiyon sosyal alan", en: "Structural steel amenity building" },
+    title: { tr: "Hacı Ömerli Mesire Alanı Sosyal Tesis", en: "Hacı Ömerli Recreation Area Amenity Building", ar: "مبنى خدمات في متنزه حاجي عمرلي" },
+    place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye", ar: "علي آغا، إزمير" },
+    scope: { tr: "Çelik konstrüksiyon sosyal alan", en: "Structural steel amenity building", ar: "مبنى خدمات بهيكل فولاذي" },
     facts: [
       ["area", "240 m²"],
       ["steel", "18,8 ton|18.8 t"],
@@ -356,9 +356,9 @@ window.PROJECTS = [
   },
   {
     slug: "aliaga-mobilya-deposu", status: "done", cat: "steel", kind: "design", country: "TR",
-    title: { tr: "Aliağa Mobilya Deposu", en: "Aliağa Furniture Warehouse" },
-    place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye" },
-    scope: { tr: "Çelik konstrüksiyon depo yapısı", en: "Structural steel warehouse" },
+    title: { tr: "Aliağa Mobilya Deposu", en: "Aliağa Furniture Warehouse", ar: "مستودع أثاث في علي آغا" },
+    place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye", ar: "علي آغا، إزمير" },
+    scope: { tr: "Çelik konstrüksiyon depo yapısı", en: "Structural steel warehouse", ar: "مستودع بهيكل فولاذي" },
     facts: [["area", "36 × 30 m · 1.080 m²|36 × 30 m · 1,080 m²"], ["delivered", "Nisan 2023|April 2023"]],
     year: 2023,
     images: [
@@ -367,9 +367,9 @@ window.PROJECTS = [
   },
   {
     slug: "aliaga-ciftlik-ahir", status: "done", cat: "steel", kind: "design", country: "TR",
-    title: { tr: "Aliağa Çiftlik Projesi Ahır Yapısı", en: "Aliağa Farm Barn" },
-    place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye" },
-    scope: { tr: "Çelik konstrüksiyon ahır yapısı", en: "Structural steel barn" },
+    title: { tr: "Aliağa Çiftlik Projesi Ahır Yapısı", en: "Aliağa Farm Barn", ar: "حظيرة مزرعة في علي آغا" },
+    place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye", ar: "علي آغا، إزمير" },
+    scope: { tr: "Çelik konstrüksiyon ahır yapısı", en: "Structural steel barn", ar: "حظيرة بهيكل فولاذي" },
     facts: [["area", "30 × 90 m · 2.700 m²|30 × 90 m · 2,700 m²"], ["delivered", "Aralık 2021|December 2021"]],
     year: 2021,
     images: [
@@ -378,10 +378,10 @@ window.PROJECTS = [
   },
   {
     slug: "aliaga-ciftlik-idari-bina", status: "done", cat: "steel", kind: "design", country: "TR",
-    title: { tr: "Aliağa Çiftlik Projesi İdari Bina", en: "Aliağa Farm Office Building" },
-    place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye" },
-    scope: { tr: "Çelik konstrüksiyon idari bina", en: "Structural steel office building" },
-    facts: [["area", "30 × 15 m · 2 kat · 900 m²|30 × 15 m · 2 storeys · 900 m²"], ["delivered", "Aralık 2021|December 2021"]],
+    title: { tr: "Aliağa Çiftlik Projesi İdari Bina", en: "Aliağa Farm Office Building", ar: "المبنى الإداري لمزرعة في علي آغا" },
+    place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye", ar: "علي آغا، إزمير" },
+    scope: { tr: "Çelik konstrüksiyon idari bina", en: "Structural steel office building", ar: "مبنى إداري بهيكل فولاذي" },
+    facts: [["area", "30 × 15 m · 2 kat · 900 m²|30 × 15 m · 2 storeys · 900 m²|30 × 15 م · طابقان · 900 م²"], ["delivered", "Aralık 2021|December 2021"]],
     year: 2021,
     images: [
       { src: "idari-1.jpg", fit: "contain", alt: { tr: "İki katlı çelik idari bina modeli", en: "Two-storey steel office model" } }
@@ -389,9 +389,9 @@ window.PROJECTS = [
   },
   {
     slug: "k1-plaza-ilave-kat", status: "done", cat: "rc", kind: "design", country: "TR", featured: 6,
-    title: { tr: "K-1 Plaza İlave Kat ve Güçlendirme", en: "K-1 Plaza Additional Storey and Strengthening" },
-    scope: { tr: "İlave kat, güçlendirme ve uygulama projesi", en: "Additional storey, strengthening and construction drawings" },
-    facts: [["area", "300 m² kapalı alan|300 m² enclosed area"], ["delivered", "Eylül 2022|September 2022"]],
+    title: { tr: "K-1 Plaza İlave Kat ve Güçlendirme", en: "K-1 Plaza Additional Storey and Strengthening", ar: "إضافة طابق وتدعيم مبنى K-1 Plaza" },
+    scope: { tr: "İlave kat, güçlendirme ve uygulama projesi", en: "Additional storey, strengthening and construction drawings", ar: "إضافة طابق والتدعيم وإعداد المخططات التنفيذية" },
+    facts: [["area", "300 m² kapalı alan|300 m² enclosed area|300 م² مساحة مغلقة"], ["delivered", "Eylül 2022|September 2022"]],
     year: 2022,
     images: [
       { src: "k1-1.jpg", fit: "contain", alt: { tr: "Çok katlı betonarme yapı modeli", en: "Multi-storey RC building model" } }
@@ -399,12 +399,12 @@ window.PROJECTS = [
   },
   {
     slug: "aliaga-sakran-konut", status: "done", cat: "rc", kind: "design", country: "TR",
-    title: { tr: "Aliağa Şakran Konut Projesi", en: "Aliağa Şakran Residential Building" },
-    place: { tr: "Şakran, Aliağa, İzmir", en: "Şakran, Aliağa, İzmir, Türkiye" },
+    title: { tr: "Aliağa Şakran Konut Projesi", en: "Aliağa Şakran Residential Building", ar: "مبنى سكني في شاكران، علي آغا" },
+    place: { tr: "Şakran, Aliağa, İzmir", en: "Şakran, Aliağa, İzmir, Türkiye", ar: "شاكران، علي آغا، إزمير" },
     facts: [
-      ["area", "990 m²|990 m² gross floor area"],
-      ["storeys", "1 bodrum + zemin + 3 normal kat|Basement + ground + 3 storeys"],
-      ["system", "Yüksek süneklik düzeyli çerçeve ve boşluksuz perde|High-ductility frames with solid shear walls"],
+      ["area", "990 m²|990 m² gross floor area|990 م² إجمالي مساحة الطوابق"],
+      ["storeys", "1 bodrum + zemin + 3 normal kat|Basement + ground + 3 storeys|قبو + طابق أرضي + 3 طوابق"],
+      ["system", "Yüksek süneklik düzeyli çerçeve ve boşluksuz perde|High-ductility frames with solid shear walls|إطارات عالية المطيلية مع جدران قص مصمتة"],
       ["delivered", "Temmuz 2023|July 2023"]
     ],
     year: 2023,
