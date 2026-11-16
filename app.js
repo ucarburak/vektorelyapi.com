@@ -5,6 +5,11 @@
   var WA = "905325839769";
   var PHONE = "+90 532 583 97 69";
   var MAIL = "info@vektorelyapi.com";
+  // Sosyal hesaplar (Burak, 16.11.2026: LinkedIn yalnız şirket sayfası; Instagram az aktif ama olsun). Boş adres görünmez.
+  var SOCIAL = [
+    ["LinkedIn", "https://www.linkedin.com/company/87382831/", "Vektörel Yapı"],
+    ["Instagram", "", ""]
+  ].filter(function (s) { return s[1]; });
 
   var T = {
     tr: {
@@ -566,6 +571,7 @@
       '<a class="contact" href="' + waLink() + '" target="_blank" rel="noopener"><span class="c-l">' + esc(x.wa) + '</span><span class="c-v num">' + PHONE + "</span></a>" +
       '<a class="contact" href="tel:' + PHONE.replace(/\s/g, "") + '"><span class="c-l">' + esc(x.phone) + '</span><span class="c-v num">' + PHONE + "</span></a>" +
       '<a class="contact" href="mailto:' + MAIL + '"><span class="c-l">' + esc(x.mail) + '</span><span class="c-v">' + MAIL + "</span></a>" +
+      SOCIAL.map(function (s) { return '<a class="contact" href="' + s[1] + '" target="_blank" rel="noopener"><span class="c-l">' + s[0] + '</span><span class="c-v">' + esc(s[2]) + "</span></a>"; }).join("") +
       '<div class="contact"><span class="c-l">' + esc(x.locationLabel) + '</span><span class="c-v">' + esc(x.location) + "</span></div>" +
       "</div></div></section>";
   }
@@ -595,7 +601,8 @@
       lang: ["tr", "en"].map(function (l) { return '<button type="button" data-lang="' + l + '" aria-pressed="' + (l === lang) + '">' + l.toUpperCase() + "</button>"; }).join(""),
       fnote: esc(x.footerNote),
       fcompany: esc(x.company),
-      flinks: nav.map(function (n) { return '<a href="' + href(n[0]) + '">' + esc(n[1]) + "</a>"; }).join("") + '<a href="' + href("privacy") + '">' + esc(x.privacyLink) + '</a><a href="mailto:' + MAIL + '">' + MAIL + "</a>"
+      flinks: nav.map(function (n) { return '<a href="' + href(n[0]) + '">' + esc(n[1]) + "</a>"; }).join("") + '<a href="' + href("privacy") + '">' + esc(x.privacyLink) + '</a><a href="mailto:' + MAIL + '">' + MAIL + "</a>" +
+        SOCIAL.map(function (s) { return '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + "</a>"; }).join("")
     };
   }
 
