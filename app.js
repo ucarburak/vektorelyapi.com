@@ -59,12 +59,12 @@
           ["Mevcut yapılar: performans analizi ve güçlendirme", "TBDY 2018 Bölüm 15"]
         ] },
         { title: "Çelik Yapılar", rows: [
-          ["Deprem hesabı", "TBDY 2018"],
-          ["Yükler", "TS 498"],
-          ["Eleman ve birleşim tasarımı", "ÇYTHYE 2018"]
+          ["Deprem hesabı", "TBDY 2018 / ASCE 7 · AISC 341"],
+          ["Yükler", "TS 498 / ASCE 7"],
+          ["Eleman ve birleşim tasarımı", "ÇYTHYE 2018 / AISC 360"]
         ] }
       ],
-      featuredTitle: "Seçilmiş Projeler",
+      featuredTitle: "Referans Projeler",
       allProjects: "Tüm projeler",
       ctaTitle: "Projeniz İçin Yapısal Analiz Desteği Mi Gerekiyor?",
       ctaText: "Proje kapsamını, yerini ve takvimini kısaca yazın.",
@@ -208,12 +208,12 @@
           ["Existing buildings: performance assessment and strengthening", "TBDY 2018 Chapter 15"]
         ] },
         { title: "Steel Structures", rows: [
-          ["Seismic design", "TBDY 2018"],
-          ["Loads", "TS 498"],
-          ["Member and connection design", "ÇYTHYE 2018"]
+          ["Seismic design", "TBDY 2018 / ASCE 7 · AISC 341"],
+          ["Loads", "TS 498 / ASCE 7"],
+          ["Member and connection design", "ÇYTHYE 2018 / AISC 360"]
         ] }
       ],
-      featuredTitle: "Selected Projects",
+      featuredTitle: "Reference Projects",
       allProjects: "All projects",
       ctaTitle: "Need Structural Analysis Support For Your Project?",
       ctaText: "Send a short note on scope, location and schedule.",
@@ -437,9 +437,9 @@
   // Ana sayfa ve Hakkında için kısa yönetmelik özeti; tabloların tamamı Hizmetler sayfasında.
   function codesStrip() {
     var x = t();
-    var codes = ["TS 500", "TBDY 2018", "ACI 318", "ACI 350", "ACI 350.3", "BS 8007", "ASCE 7"];
+    var codes = ["TS 500", "TBDY 2018", "ACI 318", "ACI 350", "ACI 350.3", "BS 8007", "ASCE 7", "AISC 360"];
     return '<section class="codes"><div class="wrap codes-inner"><div><span class="label">' + esc(x.codesLabel) + '</span><p>' + esc(x.codesLead) + '</p></div>' +
-      '<p class="codes-list num">' + codes.map(esc).join("<span>·</span>") + '</p>' +
+      '<p class="codes-list num">' + codes.map(function (c) { return "<b>" + esc(c) + "</b>"; }).join(" <span>·</span> ") + '</p>' +
       '<a class="arrow" href="' + href("services") + '">' + esc(x.codesMore) + "</a></div></section>";
   }
 
