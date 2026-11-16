@@ -420,7 +420,7 @@
     return '<div class="services">' + ["water", "rc", "steel"].map(function (k, n) {
       var s = x.services[k];
       var rel = P.filter(function (p) { return p.cat === k; });
-      var simg = { water: ["suluq-1.jpg", ""], rc: ["k1-1.jpg", " is-model"], steel: ["baglanti-detayi.jpg", ""] }[k];
+      var simg = { water: ["suluq-1.jpg", ""], rc: ["k1-1.jpg", " is-model"], steel: ["novart-1.jpg", " is-model"] }[k];
       var body = '<article class="service" id="svc-' + k + '"><div class="media svc-img' + simg[1] + '"><img loading="lazy" src="' + img(simg[0]) + '" alt=""></div>' +
         '<div class="svc-no">0' + (n + 1) + '<span class="num">' + rel.length + " " + (lang === "en" ? "projects" : "proje") + "</span></div>" +
         "<h3>" + esc(TC(s.title)) + "</h3><p>" + esc(s.text) + "</p>";
