@@ -304,6 +304,41 @@ window.PROJECTS = [
     ]
   },
   {
+    slug: "sisecam-ambar-cephe", status: "done", cat: "steel", kind: "design", country: "TR",
+    title: { tr: "Şişecam Kırklareli Ambar Cephe Kolonları", en: "Şişecam Kırklareli Warehouse Façade Columns" },
+    place: { tr: "Şişecam Düzcam Kırklareli Fabrikaları", en: "Şişecam Flat Glass Plant, Kırklareli" },
+    scope: { tr: "Ambar cephesi çelik kolonları", en: "Steel columns for the warehouse façade" },
+    facts: [["contractor", "Alkataş İnşaat ve Taahhüt A.Ş."], ["delivered", "Aralık 2024|December 2024"]],
+    year: 2024,
+    images: [
+      { src: "ambar-1.jpg", fit: "contain", alt: { tr: "Cephe kolonları ve kaplama, model", en: "Façade columns and cladding, model" } },
+      { src: "ambar-2.jpg", fit: "contain", alt: { tr: "Çelik cephe kolonları, model", en: "Steel façade columns, model" } }
+    ]
+  },
+  {
+    slug: "sisecam-ag-kosk-temeli", status: "done", cat: "rc", kind: "design", country: "TR",
+    title: { tr: "Şişecam Kırklareli AG Köşk Temeli", en: "Şişecam Kırklareli LV Kiosk Foundation" },
+    place: { tr: "Şişecam Düzcam Kırklareli Fabrikaları", en: "Şişecam Flat Glass Plant, Kırklareli" },
+    scope: { tr: "Alçak gerilim köşkü için betonarme temel", en: "Reinforced concrete foundation for a low-voltage kiosk" },
+    facts: [["contractor", "Alkataş İnşaat ve Taahhüt A.Ş."], ["delivered", "Mayıs 2025|May 2025"]],
+    year: 2025,
+    images: [
+      { src: "kosk-1.jpg", fit: "contain", alt: { tr: "Temel modeli", en: "Foundation model" } },
+      { src: "kosk-2.jpg", fit: "contain", alt: { tr: "Temel analiz sonucu", en: "Foundation analysis result" } }
+    ]
+  },
+  {
+    slug: "sisecam-catalca-vinc-temeli", status: "done", cat: "rc", kind: "design", country: "TR",
+    title: { tr: "Şişecam Çatalca Vinç Temeli", en: "Şişecam Çatalca Crane Foundation" },
+    place: { tr: "Çatalca, İstanbul", en: "Çatalca, İstanbul, Türkiye" },
+    scope: { tr: "Vinç için betonarme temel", en: "Reinforced concrete foundation for a crane" },
+    facts: [["contractor", "Alkataş İnşaat ve Taahhüt A.Ş."], ["delivered", "Mart 2023|March 2023"]],
+    year: 2023,
+    images: [
+      { src: "vinc-1.jpg", fit: "contain", alt: { tr: "Vinç temeli modeli", en: "Crane foundation model" } }
+    ]
+  },
+  {
     slug: "haci-omerli-mesire", status: "done", cat: "steel", kind: "design", country: "TR",
     title: { tr: "Hacı Ömerli Mesire Alanı Sosyal Tesis", en: "Hacı Ömerli Recreation Area Pavilion" },
     place: { tr: "Aliağa, İzmir", en: "Aliağa, İzmir, Türkiye" },
