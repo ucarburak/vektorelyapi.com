@@ -132,7 +132,7 @@
           ["Veri Sorumlusu", ["Vektörel Yapı Proje Mühendislik İnşaat Sanayi ve Ticaret Ltd. Şti., Bayraklı, İzmir. E-posta: info@vektorelyapi.com"]],
           ["Bu Sitede Toplanan Veriler", [
             "Bu sitede üyelik sistemi yoktur ve site, form aracılığıyla bilgi kaydetmez. İletişim sayfasındaki teklif formu, yazdıklarınızı yalnızca WhatsApp'ta hazır bir mesaj olarak açar; mesajı siz göndermedikçe bilgiler bize ulaşmaz ve sitede saklanmaz.",
-            "Siteyi barındıran hizmet sağlayıcı, sitenin güvenli ve kesintisiz çalışması için IP adresi, tarayıcı bilgisi ve ziyaret zamanı gibi teknik kayıtları tutabilir. Site, başka bir firmanın sunucusundan yazı tipi, reklam veya takip kodu yüklemez."
+            "Siteyi barındıran hizmet sağlayıcı, sitenin güvenli ve kesintisiz çalışması için IP adresi, tarayıcı bilgisi ve ziyaret zamanı gibi teknik kayıtları tutabilir. Ziyaret sayılarını ölçmek için Cloudflare Web Analytics kullanılır. Bu hizmet hangi sayfaların açıldığını, ziyaretçinin hangi siteden geldiğini, ülkesini ve cihaz türünü toplu olarak sayar; çerez kullanmaz ve ziyaretçileri tek tek izlemez. Bunun dışında site, başka bir firmanın sunucusundan yazı tipi, reklam veya takip kodu yüklemez."
           ]],
           ["Çerezler", ["Bu site çerez kullanmaz ve tarayıcınıza bilgi kaydetmez."]],
           ["Bize Yazdığınızda İşlenen Veriler", ["E-posta, WhatsApp veya telefonla bize ulaştığınızda adınız, firma adınız, iletişim bilgileriniz ve paylaştığınız proje bilgileri işlenir."]],
@@ -144,7 +144,7 @@
           ["Hukuki Sebep", ["Kişisel verileriniz, Kanun'un 5. maddesinin 2. fıkrasındaki şu sebeplere dayanılarak işlenir: bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması (c), hukuki yükümlülüğümüzü yerine getirmemiz (ç) ve temel hak ve özgürlüklerinize zarar vermemek kaydıyla meşru menfaatimiz (f)."]],
           ["Aktarım", [
             "Verileriniz satılmaz ve pazarlama amacıyla paylaşılmaz. Proje gerektirdiğinde projenin taraflarıyla (işveren, yüklenici, diğer disiplinler), yasal zorunluluk hâlinde yetkili kamu kurumlarıyla ve mali müşavirimizle paylaşılabilir.",
-            "E-posta (Google Workspace), mesajlaşma (WhatsApp) ve site barındırma (GitHub) hizmetlerinin sunucuları yurt dışında bulunabilir. Bu hizmetler üzerinden yapılan yazışmalar ve teknik kayıtlar bu nedenle yurt dışına aktarılmış olur."
+            "E-posta (Google Workspace), mesajlaşma (WhatsApp), site barındırma (GitHub) ve ziyaret ölçümü (Cloudflare) hizmetlerinin sunucuları yurt dışında bulunabilir. Bu hizmetler üzerinden yapılan yazışmalar ve teknik kayıtlar bu nedenle yurt dışına aktarılmış olur."
           ]],
           ["Saklama Süresi", ["Veriler, işleme amacının gerektirdiği süre ve ilgili mevzuattaki saklama süreleri boyunca saklanır; süre dolunca silinir veya anonim hâle getirilir."]],
           ["Haklarınız", [
@@ -160,8 +160,7 @@
           ]],
           ["Başvuru", ["Taleplerinizi info@vektorelyapi.com adresine e-posta ile veya yazılı olarak iletebilirsiniz. Başvurunuz, Kanun'un 13. maddesi uyarınca en geç otuz gün içinde ücretsiz olarak sonuçlandırılır."]]
         ],
-        updated: "Son güncelleme: Kasım 2026",
-        pending: ["Ziyaret ölçümü (analitik) eklenirse metne bir cümle eklenir."]
+        updated: "Son güncelleme: Kasım 2026"
       }
     },
     en: {
@@ -280,7 +279,7 @@
           ["Data Controller", ["Vektörel Yapı Proje Mühendislik İnşaat Sanayi ve Ticaret Ltd. Şti., Bayraklı, İzmir, Türkiye. Email: info@vektorelyapi.com"]],
           ["Data Collected on This Site", [
             "This site has no user accounts and does not store anything you enter. The quote form on the contact page only opens WhatsApp with your message ready to send; nothing reaches us unless you send it, and nothing is stored on the site.",
-            "Our hosting provider may keep technical logs such as IP address, browser details and time of visit to keep the site secure and available. The site loads no fonts, ads or tracking code from third-party servers."
+            "Our hosting provider may keep technical logs such as IP address, browser details and time of visit to keep the site secure and available. We use Cloudflare Web Analytics to count visits. It counts, in aggregate, which pages are opened, the referring site, country and device type; it uses no cookies and does not track individual visitors. Apart from this, the site loads no fonts, ads or tracking code from third-party servers."
           ]],
           ["Cookies", ["This site uses no cookies and stores nothing in your browser."]],
           ["When You Contact Us", ["When you write to us by email or WhatsApp, or call us, we process your name, company, contact details and the project information you share."]],
@@ -292,7 +291,7 @@
           ["Legal Basis", ["We process this data on the grounds set out in Article 5(2) of the Law: it is directly necessary to conclude or perform a contract (c), to meet our legal obligations (ç), and for our legitimate interests, provided your fundamental rights and freedoms are not harmed (f)."]],
           ["Disclosure", [
             "We do not sell your data or share it for marketing. Where a project requires it, we may share it with the project parties (owner, contractor, other disciplines), with public authorities where the law requires, and with our accountant.",
-            "The servers of our email (Google Workspace), messaging (WhatsApp) and hosting (GitHub) providers may be located outside Türkiye, so correspondence and technical logs handled through them are transferred abroad."
+            "The servers of our email (Google Workspace), messaging (WhatsApp), hosting (GitHub) and visit measurement (Cloudflare) providers may be located outside Türkiye, so correspondence and technical logs handled through them are transferred abroad."
           ]],
           ["Retention", ["We keep data for as long as the purpose requires and for the periods set by law, then delete or anonymise it."]],
           ["Your Rights", [
@@ -308,8 +307,7 @@
           ]],
           ["How to Apply", ["Send your request to info@vektorelyapi.com or in writing. Under Article 13 of the Law, we will respond free of charge within thirty days at the latest."]]
         ],
-        updated: "Last updated: November 2026",
-        pending: ["If analytics is added, one sentence is added."]
+        updated: "Last updated: November 2026"
       }
     }
   };
@@ -588,7 +586,7 @@
           return typeof b === "string" ? "<p>" + esc(b) + "</p>" : "<ul>" + b.map(function (li) { return "<li>" + esc(li) + "</li>"; }).join("") + "</ul>";
         }).join("");
       }).join("") + '<p class="legal-date">' + esc(p.updated) + "</p>" +
-      '<div class="pending"><strong>' + esc(x.pendingTitle) + "</strong><ul>" + p.pending.map(function (q) { return "<li>" + esc(q) + "</li>"; }).join("") + "</ul></div>" +
+      (p.pending ? '<div class="pending"><strong>' + esc(x.pendingTitle) + "</strong><ul>" + p.pending.map(function (q) { return "<li>" + esc(q) + "</li>"; }).join("") + "</ul></div>" : "") +
       "</div></div></section>";
   }
 
