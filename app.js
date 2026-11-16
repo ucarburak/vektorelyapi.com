@@ -8,7 +8,7 @@
 
   var T = {
     tr: {
-      nav: { home: "Ana Sayfa", services: "Hizmetler", projects: "Projeler", about: "Hakkında", contact: "İletişim" },
+      nav: { home: "Ana Sayfa", services: "Hizmetler", projects: "Projeler", about: "Hakkımızda", contact: "İletişim" },
       draft: "Önizleme sürümü, yayında değil. Sarı işaretli alanlar sizden bilgi bekliyor.",
       metaDesc: "Betonarme ve çelik yapılar için statik proje. Uzmanlık alanımız su tutan yapılar ve arıtma tesisleri. Türkiye, Libya, Irak.",
       heroTitle: "Betonarme ve Çelik Yapılar İçin Statik Proje",
@@ -90,11 +90,11 @@
       },
       pendingTitle: "Sizden Beklenen Bilgi",
       prev: "Önceki Proje", next: "Sonraki Proje",
-      aboutTitle: "Hakkında",
+      aboutTitle: "Hakkımızda",
       about: [
-        "Vektörel Yapı Proje Mühendislik, İzmir merkezli bir statik proje ve mühendislik firmasıdır. Betonarme ve çelik yapıların statik hesabını ve uygulama projesini hazırlıyor, ihale aşamasında yüklenicilere mühendislik desteği veriyoruz. En derin uzmanlık alanımız su tutan yapılar ve arıtma tesisleridir.",
+        "Vektörel Yapı Proje Mühendislik olarak İzmir'den statik proje ve mühendislik hizmeti veriyoruz. Betonarme ve çelik yapıların statik hesabını ve uygulama projesini hazırlıyor, ihale aşamasında yüklenicilere mühendislik desteği sağlıyoruz. En derin uzmanlık alanımız su tutan yapılar ve arıtma tesisleri.",
         "Türkiye'de belediye, organize sanayi bölgesi ve sanayi tesisi projelerinde; Libya ve Irak'ta yüklenici ve proses firmalarıyla tesis projelerinde çalışıyoruz. Su tutan yapılarda deprem etkisini, hidrodinamik basıncı ve çatlak kontrolünü Türk ve uluslararası yönetmeliklere göre hesaplıyoruz.",
-        "Yapısal modeli, hesabı ve uygulama çizimlerini her aşamada birbiriyle karşılaştırarak kontrol ederiz. Geoteknik, mimari ve proses disiplinleriyle eşgüdüm içinde çalışır, teslim ettiğimiz projeyi uygulama süresince destekleriz."
+        "Yapısal modeli, hesabı ve uygulama çizimlerini her aşamada birbiriyle karşılaştırarak kontrol ediyoruz. Geoteknik, mimari ve proses disiplinleriyle eşgüdüm içinde çalışıyor, teslim ettiğimiz projeyi uygulama süresince destekliyoruz."
       ],
       aboutPending: ["Kurucu fotoğrafı", "Mesleki deneyim yılı ve geçmiş", "Oda sicil numarası (yayınlamak isterseniz)"],
       founder: "Burak Uçar",
@@ -157,7 +157,7 @@
       }
     },
     en: {
-      nav: { home: "Home", services: "Services", projects: "Projects", about: "About", contact: "Contact" },
+      nav: { home: "Home", services: "Services", projects: "Projects", about: "About Us", contact: "Contact" },
       draft: "Preview, not published. Fields marked in yellow are waiting for your input.",
       metaDesc: "Structural design for concrete and steel structures. Specialists in water-retaining structures and treatment plants. Türkiye, Libya, Iraq.",
       heroTitle: "Structural Design For Concrete and Steel Structures",
@@ -239,9 +239,9 @@
       },
       pendingTitle: "Information Needed",
       prev: "Previous Project", next: "Next Project",
-      aboutTitle: "About",
+      aboutTitle: "About Us",
       about: [
-        "Vektörel Yapı Proje Mühendislik is a structural design and engineering firm based in İzmir, Türkiye. We prepare structural calculations and construction drawings for concrete and steel structures and provide engineering support to contractors at tender stage. Our deepest specialism is water-retaining structures and treatment plants.",
+        "We are Vektörel Yapı Proje Mühendislik, a structural design and engineering firm based in İzmir, Türkiye. We prepare structural calculations and construction drawings for concrete and steel structures and provide engineering support to contractors at tender stage. Our deepest specialism is water-retaining structures and treatment plants.",
         "In Türkiye we work on municipal, industrial-zone and industrial plant projects; in Libya and Iraq, on plant projects with contractors and process engineering firms. For water-retaining structures we design for seismic action, hydrodynamic pressure and crack control to the relevant Turkish and international codes.",
         "We check the structural model, the calculations and the construction drawings against one another at every stage. We coordinate with geotechnical, architectural and process disciplines and support our design through construction."
       ],
