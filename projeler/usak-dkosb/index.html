@@ -124,8 +124,7 @@ p { margin: 0; }
 
 /* stats strip */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.stats div { padding: 34px 28px 34px 0; border-right: 1px solid var(--line); }
-.stats div + div { padding-left: 28px; }
+.stats div { padding: 34px 28px; border-right: 1px solid var(--line); text-align: center; }
 .stats div:last-child { border-right: 0; }
 .stats dt { font: 600 clamp(3.5rem, 6vw, 5.5rem)/0.9 var(--font-display); color: var(--white); }
 .stats div:first-child dt { color: var(--accent); }
@@ -332,8 +331,7 @@ a.contact:hover { border-top-color: var(--accent); }
   .actions .btn { width: 100%; }
   .hero-cap { margin-top: 28px; }
   .stats { grid-template-columns: repeat(3, 1fr); }
-  .stats div { padding: 20px 8px 20px 0; }
-  .stats div + div { padding-left: 12px; }
+  .stats div { padding: 20px 8px; }
   .stats dt { font-size: 2.75rem; }
   .stats dd { font-size: 0.82rem; line-height: 1.3; }
   .block { padding: 72px 0; }
