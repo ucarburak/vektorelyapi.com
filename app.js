@@ -6,9 +6,12 @@
   var PHONE = "+90 532 583 97 69";
   var MAIL = "info@vektorelyapi.com";
   // Sosyal hesaplar (Burak, 16.11.2026: LinkedIn yalnız şirket sayfası; Instagram az aktif ama olsun). Boş adres görünmez.
+  // [ad, adres, kartta görünen değer, simge (tek renk, currentColor)]
   var SOCIAL = [
-    ["LinkedIn", "https://www.linkedin.com/company/87382831/", "Vektörel Yapı"],
-    ["Instagram", "https://www.instagram.com/vektorelyapi/", "@vektorelyapi"]
+    ["LinkedIn", "https://www.linkedin.com/company/87382831/", "Vektörel Yapı",
+      '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.6 4.78 6V21h-4v-5.2c0-1.25-.03-2.85-1.75-2.85-1.75 0-2.02 1.36-2.02 2.76V21h-4z"/></svg>'],
+    ["Instagram", "https://www.instagram.com/vektorelyapi/", "@vektorelyapi",
+      '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>']
   ].filter(function (s) { return s[1]; });
 
   var T = {
@@ -571,7 +574,7 @@
       '<a class="contact" href="' + waLink() + '" target="_blank" rel="noopener"><span class="c-l">' + esc(x.wa) + '</span><span class="c-v num">' + PHONE + "</span></a>" +
       '<a class="contact" href="tel:' + PHONE.replace(/\s/g, "") + '"><span class="c-l">' + esc(x.phone) + '</span><span class="c-v num">' + PHONE + "</span></a>" +
       '<a class="contact" href="mailto:' + MAIL + '"><span class="c-l">' + esc(x.mail) + '</span><span class="c-v">' + MAIL + "</span></a>" +
-      SOCIAL.map(function (s) { return '<a class="contact" href="' + s[1] + '" target="_blank" rel="noopener"><span class="c-l" lang="en">' + s[0] + '</span><span class="c-v">' + esc(s[2]) + "</span></a>"; }).join("") +
+      SOCIAL.map(function (s) { return '<a class="contact" href="' + s[1] + '" target="_blank" rel="noopener"><span class="c-l" lang="en">' + s[3] + s[0] + '</span><span class="c-v">' + esc(s[2]) + "</span></a>"; }).join("") +
       '<div class="contact"><span class="c-l">' + esc(x.locationLabel) + '</span><span class="c-v">' + esc(x.location) + "</span></div>" +
       "</div></div></section>";
   }
@@ -602,7 +605,7 @@
       fnote: esc(x.footerNote),
       fcompany: esc(x.company),
       flinks: nav.map(function (n) { return '<a href="' + href(n[0]) + '">' + esc(n[1]) + "</a>"; }).join("") + '<a href="' + href("privacy") + '">' + esc(x.privacyLink) + '</a><a href="mailto:' + MAIL + '">' + MAIL + "</a>" +
-        SOCIAL.map(function (s) { return '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + "</a>"; }).join("")
+        SOCIAL.map(function (s) { return '<a class="soc" href="' + s[1] + '" target="_blank" rel="noopener" aria-label="' + s[0] + '" title="' + s[0] + '">' + s[3] + "</a>"; }).join("")
     };
   }
 
