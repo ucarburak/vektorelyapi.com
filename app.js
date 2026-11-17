@@ -24,7 +24,7 @@
       seeProjects: "Projeleri inceleyin",
       whatsapp: "WhatsApp'tan yazın",
       heroCaption: "Suluq Atıksu Arıtma Tesisi, Libya · 12.000 m³/gün · 25 yapı",
-      stats: [["projects", "tamamlanmış proje"], ["countries", "ülke: Türkiye, Libya, Irak"], ["water", "arıtma ve su tutan yapı projesi"]],
+      stats: [["projects", "Tamamlanmış Proje"], ["countries", "Ülke: Türkiye, Libya, Irak"], ["water", "Arıtma ve Su Tutan Yapı Projesi"]],
       servicesTitle: "Hizmetler",
       servicesLead: "Konut ve sanayi yapılarından arıtma tesislerine, üç alanda statik hesap ve uygulama projesi hazırlıyoruz.",
       services: {
@@ -172,7 +172,7 @@
       seeProjects: "View projects",
       whatsapp: "Message on WhatsApp",
       heroCaption: "Suluq Wastewater Treatment Plant, Libya · 12,000 m³/day · 25 structures",
-      stats: [["projects", "completed projects"], ["countries", "countries: Türkiye, Libya, Iraq"], ["water", "treatment and water-retaining projects"]],
+      stats: [["projects", "Completed Projects"], ["countries", "Countries: Türkiye, Libya, Iraq"], ["water", "Treatment and Water-Retaining Projects"]],
       servicesTitle: "Services",
       servicesLead: "From residential and industrial buildings to treatment plants, we prepare structural calculations and construction drawings in three fields.",
       services: {
