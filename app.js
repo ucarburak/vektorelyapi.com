@@ -43,7 +43,7 @@
         rc: {
           title: "Betonarme Yapı Projeleri",
           text: "Konut, kamu ve endüstriyel betonarme binaların, temel ve istinat yapılarının statik hesabını ve uygulama projesini hazırlıyoruz. Mevcut yapılarda performans analizi ve güçlendirme, başka ofislerin projelerinde bağımsız kontrol yapıyoruz.",
-          list: ["Konut ve ticari binalar", "Okul, sağlık ve idari binalar", "Endüstriyel tesis ve üretim binaları", "Otopark ve çok katlı bodrum yapıları", "Betonarme depo, silo ve bunker yapıları", "Ekipman ve makine temelleri", "Radye, kazıklı ve sürekli temel sistemleri", "İstinat duvarları ve bodrum perdeleri", "Güçlendirme ve performans analizi", "Statik proje kontrolü ve bağımsız inceleme", "Keşif ve metraj"]
+          list: ["Konut ve ticari binalar", "Okul, sağlık ve idari binalar", "Endüstriyel tesis ve üretim binaları", "Otopark ve çok katlı bodrum yapıları", "Betonarme depo, silo ve bunker yapıları", "Ekipman ve makine temelleri", "Radye, kazıklı ve sürekli temel sistemleri", "İstinat duvarları ve bodrum perdeleri", "Statik proje kontrolü ve bağımsız inceleme", "Keşif ve metraj"]
         },
         steel: {
           title: "Çelik Yapı Projeleri",
@@ -52,6 +52,48 @@
         }
       },
       seeRelated: "Bu alandaki projeler",
+      svcLead: "Arıtma tesisleri ve su tutan yapılar, betonarme ve çelik yapılar için statik hesap ve uygulama projesi hazırlıyoruz.",
+      svcMetaTitle: "Statik Proje Hizmetleri",
+      svcMetaDesc: "Arıtma tesisi ve su tutan yapılar, betonarme yapılar (mevcut yapılarda performans analizi ve güçlendirme dahil) ve çelik yapılar için statik proje hizmetleri. Türkiye, Libya, Irak.",
+      svcScope: "Hizmet Kapsamı",
+      svcProjects: "Bu Alandaki Projeler",
+      svcNotes: "İlgili Teknik Notlar",
+      svcOther: "Diğer Hizmetler",
+      svcPages: {
+        water: {
+          title: "Arıtma Tesisi ve Su Tutan Yapı Statik Projesi",
+          list: ["Havalandırma ve dengeleme havuzları", "Dairesel çöktürme havuzları", "Temiz su ve proses tankları", "Tesis binaları ve ekipman temelleri", "İhale dosyası yapısal keşif ve metraj", "Uygulama süresince proje desteği"],
+          lead: "Atıksu ve içme suyu arıtma tesislerinin havuz, tank ve bina yapıları için statik hesap ve uygulama projesi.",
+          meta: "Arıtma tesisi ve su tutan yapı statik projesi: havalandırma havuzları, dairesel çöktürme havuzları, tanklar ve tesis binaları. Türkiye, Libya ve Irak'ta referans projeler.",
+          intro: [
+            "Atıksu ve içme suyu arıtma tesisleri, su tutan yapılardan ve tesis binalarından oluşan, birbirine bağlı yapı gruplarıdır. Havalandırma ve dengeleme havuzlarının, dairesel çöktürme havuzlarının, temiz su ve proses tanklarının, kanalların ve tesis binalarının statik hesabını ve uygulama projesini hazırlıyoruz.",
+            "Bu yapılarda taşıyıcılık kadar sızdırmazlık ve uzun süreli dayanıklılık da belirleyicidir. Tasarımda suyun ve toprağın basıncını, deprem sırasında suyun oluşturduğu hidrodinamik etkileri ve çatlak kontrolünü birlikte ele alıyoruz.",
+            "Ana yükleniciler ve proses firmalarıyla ihale aşamasından uygulama projesine kadar çalışıyoruz. İhale aşamasında yapısal keşif ve metraj hazırlıyor, teslim ettiğimiz projeyi uygulama süresince destekliyoruz."
+          ]
+        },
+        rc: {
+          title: "Betonarme Statik Proje",
+          list: ["Konut ve ticari binalar", "Okul, sağlık ve idari binalar", "Endüstriyel tesis ve üretim binaları", "Otopark ve çok katlı bodrum yapıları", "Betonarme depo, silo ve bunker yapıları", "Ekipman ve makine temelleri", "Radye, kazıklı ve sürekli temel sistemleri", "İstinat duvarları ve bodrum perdeleri", "Mevcut yapılarda performans analizi ve güçlendirme", "Statik proje kontrolü ve bağımsız inceleme", "Keşif ve metraj"],
+          lead: "Konut, kamu ve endüstriyel betonarme yapıların, temellerin ve istinat yapılarının statik hesabı ve uygulama projesi; mevcut yapılarda performans analizi ve güçlendirme.",
+          meta: "Betonarme statik proje: konut, kamu ve endüstriyel yapılar, temeller ve istinat duvarları; mevcut yapılarda deprem performans analizi ve güçlendirme. TBDY 2018, TS 500 ve ACI 318.",
+          intro: [
+            "Konut ve ticari binalardan okul, sağlık ve idari binalara, endüstriyel tesis ve üretim binalarından otopark ve çok katlı bodrum yapılarına kadar betonarme yapıların statik hesabını ve uygulama projesini hazırlıyoruz.",
+            "Taşıyıcı sistemi mimari proje, zemin etüdü ve yapının kullanım amacıyla birlikte, tasarımın başında belirliyoruz. Radye, kazıklı ve sürekli temelleri, istinat duvarlarını ve bodrum perdelerini aynı projede ele alıyoruz. Projenin yerine ve şartnamesine göre Türk (TS 500, TBDY 2018, TS 498) ya da uluslararası (ACI 318, ASCE 7) yönetmelikleri kullanıyoruz.",
+            "Endüstriyel tesislerde betonarme depo, silo ve bunker yapılarının, ekipman ve makine temellerinin projelerini hazırlıyoruz. Başka ofislerin projelerinde statik proje kontrolü ve bağımsız inceleme, yapım işleri için keşif ve metraj da hizmetlerimiz arasında.",
+            "Mevcut betonarme binalarda deprem performansını TBDY 2018'in 15. bölümüne göre değerlendiriyoruz. Binanın mevcut durumunu, varsa eski projelerini ve sahadaki incelemeleri esas alarak hesap modelini kuruyor, gerektiğinde binanın kullanımına ve uygulama koşullarına uygun güçlendirme projesini hazırlıyoruz."
+          ]
+        },
+        steel: {
+          title: "Çelik Yapı Statik Proje",
+          lead: "Depo, atölye, tarım ve endüstriyel tesis yapılarında çelik konstrüksiyonun statik hesabı ve uygulama projesi.",
+          meta: "Çelik yapı statik projesi: depo, atölye, tarım ve endüstriyel tesis yapıları. Statik hesap, birleşim detayları ve uygulama projesi.",
+          intro: [
+            "Depo ve atölye yapılarının, ahır ve tarım yapılarının, fabrika içi koridor ve platformların, sosyal alan ve çatı yapılarının çelik konstrüksiyonu için statik hesap ve uygulama projesi hazırlıyoruz.",
+            "Taşıyıcı sistemi açıklığa, kullanıma, varsa köprülü vince, kaplamaya ve kar ile rüzgâr yüklerine göre belirliyoruz. Elemanların yanında birleşim detaylarını da projede ayrıntılı olarak gösteriyor, uygulama projesini imalatı ve montajı kolaylaştıracak açıklıkta hazırlıyoruz.",
+            "Mevcut tesislerin içinde ya da yanında yapılan çelik yapılarda işletmenin sürmesini ve sahadaki kısıtları tasarımın başından dikkate alıyoruz."
+          ]
+        }
+      },
       approachTitle: "Tasarım Yaklaşımı",
       approachLead: "Her etkiyi, o etkiyi düzenleyen yönetmeliğe göre hesaplıyoruz. Analizleri uluslararası kabul görmüş sonlu elemanlar yazılımlarıyla yapıyor, projenin yerine ve şartnamesine göre Türk ya da uluslararası yönetmelikleri kullanıyoruz.",
       approachHead: ["Etki Ya Da Kontrol", "Yönetmelik"],
@@ -68,9 +110,9 @@
           ["Devrilme ve kayma", "TBDY 2018 / IBC"]
         ] },
         { title: "Betonarme Yapılar", rows: [
-          ["Deprem hesabı", "TBDY 2018"],
-          ["Yükler", "TS 498"],
-          ["Kesit hesabı ve detaylandırma", "TS 500 · TBDY 2018"],
+          ["Deprem hesabı", "TBDY 2018 / ASCE 7"],
+          ["Yükler", "TS 498 / ASCE 7"],
+          ["Kesit hesabı ve detaylandırma", "TS 500 · TBDY 2018 / ACI 318-25"],
           ["Mevcut yapılar: performans analizi ve güçlendirme", "TBDY 2018 Bölüm 15"]
         ] },
         { title: "Çelik Yapılar", rows: [
@@ -198,7 +240,7 @@
         rc: {
           title: "Reinforced Concrete Buildings",
           text: "We prepare structural calculations and construction drawings for residential, public and industrial concrete buildings, foundations and retaining structures. We also carry out performance assessment and strengthening of existing buildings, and independent checking of other offices' designs.",
-          list: ["Residential and commercial buildings", "Schools, healthcare and public buildings", "Industrial and production buildings", "Car parks and multi-level basements", "Concrete silos, bunkers and storage structures", "Equipment and machine foundations", "Raft, piled and strip foundations", "Retaining walls and basement walls", "Strengthening and performance assessment", "Structural design review and independent checking", "Quantities and cost estimates"]
+          list: ["Residential and commercial buildings", "Schools, healthcare and public buildings", "Industrial and production buildings", "Car parks and multi-level basements", "Concrete silos, bunkers and storage structures", "Equipment and machine foundations", "Raft, piled and strip foundations", "Retaining walls and basement walls", "Structural design review and independent checking", "Quantities and cost estimates"]
         },
         steel: {
           title: "Steel Structures",
@@ -207,6 +249,48 @@
         }
       },
       seeRelated: "Projects in this field",
+      svcLead: "We prepare structural calculations and construction drawings for treatment plants and water-retaining structures, and for concrete and steel structures.",
+      svcMetaTitle: "Structural Design Services",
+      svcMetaDesc: "Structural design for treatment plants and water-retaining structures, reinforced concrete structures (including seismic assessment and strengthening of existing buildings) and steel structures. Türkiye, Libya, Iraq.",
+      svcScope: "Scope of Services",
+      svcProjects: "Projects in This Field",
+      svcNotes: "Related Technical Notes",
+      svcOther: "Other Services",
+      svcPages: {
+        water: {
+          title: "Structural Design for Treatment Plants and Water-Retaining Structures",
+          list: ["Aeration and equalisation basins", "Circular clarifiers", "Clean water and process tanks", "Plant buildings and equipment foundations", "Structural quantities and cost estimates for tenders", "Design support during construction"],
+          lead: "Structural calculations and construction drawings for the basins, tanks and buildings of wastewater and drinking water treatment plants.",
+          meta: "Structural design for wastewater and water treatment plants: aeration basins, circular clarifiers, tanks and plant buildings. Reference projects in Türkiye, Libya and Iraq.",
+          intro: [
+            "A wastewater or drinking water treatment plant is a group of connected structures: water-retaining basins and tanks, channels and plant buildings. We prepare structural calculations and construction drawings for aeration and equalisation basins, circular clarifiers, clean water and process tanks, channels and plant buildings.",
+            "In these structures, watertightness and long-term durability matter as much as strength. Our designs consider water and earth pressure, hydrodynamic effects during earthquakes and crack control together.",
+            "We work with main contractors and process companies from tender stage through to construction drawings. At tender stage we prepare structural quantities, and we support our designs throughout construction."
+          ]
+        },
+        rc: {
+          title: "Structural Design for Reinforced Concrete Structures",
+          list: ["Residential and commercial buildings", "Schools, healthcare and public buildings", "Industrial and production buildings", "Car parks and multi-level basements", "Concrete silos, bunkers and storage structures", "Equipment and machine foundations", "Raft, piled and strip foundations", "Retaining walls and basement walls", "Seismic assessment and strengthening of existing buildings", "Structural design review and independent checking", "Quantities and cost estimates"],
+          lead: "Structural calculations and construction drawings for residential, public and industrial concrete buildings, foundations and retaining structures, and seismic assessment and strengthening of existing buildings.",
+          meta: "Structural design for reinforced concrete structures: residential, public and industrial buildings, foundations and retaining walls, and seismic assessment and strengthening of existing buildings. TBDY 2018, TS 500, ACI 318.",
+          intro: [
+            "We prepare structural calculations and construction drawings for reinforced concrete buildings: residential and commercial buildings, schools, healthcare and public buildings, industrial and production buildings, car parks and multi-level basements.",
+            "We settle the structural system early, together with the architectural design, the geotechnical report and the intended use of the building. Raft, piled and strip foundations, retaining walls and basement walls are handled within the same design. Depending on the project location and specification, we apply Turkish codes (TS 500, TBDY 2018, TS 498) or international codes (ACI 318, ASCE 7).",
+            "In industrial plants we also design concrete silos, bunkers and storage structures, and equipment and machine foundations. Our services further include design review and independent checking of other offices' designs, and quantities and cost estimates for construction works.",
+            "For existing concrete buildings, we assess seismic performance to Chapter 15 of TBDY 2018. Working from the building's current condition, any existing drawings and site investigations, we build the analysis model and, where needed, prepare a strengthening design suited to the building's use and site conditions."
+          ]
+        },
+        steel: {
+          title: "Structural Design for Steel Structures",
+          lead: "Structural calculations and construction drawings for steel warehouses, workshops, agricultural and industrial plant structures.",
+          meta: "Structural design for steel structures: warehouses, workshops, agricultural and industrial buildings. Calculations, connection details and construction drawings.",
+          intro: [
+            "We prepare structural calculations and construction drawings for steel warehouses and workshops, barns and agricultural buildings, internal plant walkways and platforms, amenity buildings and roof structures.",
+            "The structural system is chosen to suit the span, the use, any overhead cranes, the cladding, and the snow and wind loads. Connections are detailed alongside the members, and the construction drawings are prepared to make fabrication and erection straightforward.",
+            "For steel structures built inside or next to operating plants, we take continued operation and site constraints into account from the start."
+          ]
+        }
+      },
       approachTitle: "Design Approach",
       approachLead: "Each action is designed to the code that governs it. We analyse with internationally recognised finite element software and apply Turkish or international codes depending on the project location and specification.",
       approachHead: ["Action Or Check", "Code"],
@@ -223,9 +307,9 @@
           ["Overturning and sliding", "TBDY 2018 / IBC"]
         ] },
         { title: "Reinforced Concrete Buildings", rows: [
-          ["Seismic design", "TBDY 2018"],
-          ["Loads", "TS 498"],
-          ["Section design and detailing", "TS 500 · TBDY 2018"],
+          ["Seismic design", "TBDY 2018 / ASCE 7"],
+          ["Loads", "TS 498 / ASCE 7"],
+          ["Section design and detailing", "TS 500 · TBDY 2018 / ACI 318-25"],
           ["Existing buildings: performance assessment and strengthening", "TBDY 2018 Chapter 15"]
         ] },
         { title: "Steel Structures", rows: [
@@ -376,9 +460,9 @@
         ["الانقلاب والانزلاق", "TBDY 2018 / IBC"]
       ] },
       { title: "منشآت الخرسانة المسلحة", rows: [
-        ["التصميم الزلزالي", "TBDY 2018"],
-        ["الأحمال", "TS 498"],
-        ["تصميم المقاطع والتفاصيل الإنشائية", "TS 500 · TBDY 2018"],
+        ["التصميم الزلزالي", "TBDY 2018 / ASCE 7"],
+        ["الأحمال", "TS 498 / ASCE 7"],
+        ["تصميم المقاطع والتفاصيل الإنشائية", "TS 500 · TBDY 2018 / ACI 318-25"],
         ["المباني القائمة: تقييم الأداء والتدعيم", "TBDY 2018، الفصل 15"]
       ] },
       { title: "المنشآت الفولاذية", rows: [
@@ -461,7 +545,7 @@
   var P = window.PROJECTS || [];
   // Teknik notlar (notes.js), en yeni önce. Arapçası yok: Arapça sayfalar İngilizce nota bağlanır.
   var N = (window.NOTES || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
-  function enOnly(view) { return view === "privacy" || view === "notes" || (view || "").indexOf("n-") === 0; }
+  function enOnly(view) { view = view || ""; return view === "privacy" || view === "notes" || view.indexOf("n-") === 0 || view.indexOf("s-") === 0; }
 
   // Sıra: biten işler teslim tarihine göre yeniden eskiye; tarihi olmayanlar en sonda.
   // Devam edenler en önde değil, ilk ONGOING_AFTER biten işin arkasına girer (Burak'ın isteği).
@@ -496,6 +580,15 @@
     en: { services: "services", projects: "projects", about: "about", contact: "contact", privacy: "privacy", notes: "technical-notes", water: "water", steel: "steel", rc: "concrete" }
   };
   SEG.ar = SEG.en; // /ar/services/, /ar/projects/suluq-aat/ …
+  // Hizmet sayfaları (TR/EN; Arapçada tek Hizmetler sayfası kalır, bağlantılar İngilizceye gider).
+  var SVC = ["water", "rc", "steel"];
+  var SVC_SEG = {
+    tr: { water: "aritma-tesisi-statik-proje", rc: "betonarme-statik-proje", steel: "celik-yapi-statik-proje" },
+    en: { water: "treatment-plant-structural-design", rc: "reinforced-concrete-structural-design", steel: "steel-structural-design" }
+  };
+  SVC_SEG.ar = SVC_SEG.en;
+  // Hizmet görselleri: [dosya, model ekran görüntüsü mü]
+  var SVC_IMG = { water: ["suluq-12.jpg", false], rc: ["k1-1.jpg", true], steel: ["novart-1.jpg", true] };
   // Dil düğmeleri. Yayında Arapça, Burak onaylayana kadar kapalı: build.js SITE.langs ile ["tr","en"] verir.
   var LANGS = SITE.langs || ["tr", "en", "ar"];
   function pathFor(view, l) {
@@ -506,6 +599,7 @@
     if (view.indexOf("projects-") === 0) return pre + "/" + s.projects + "/" + s[view.slice(9)] + "/";
     if (view.indexOf("p-") === 0) return pre + "/" + s.projects + "/" + view.slice(2) + "/";
     if (view.indexOf("n-") === 0) return pre + "/" + s.notes + "/" + view.slice(2) + "/";
+    if (view.indexOf("s-") === 0) return pre + "/" + s.services + "/" + SVC_SEG[l][view.slice(2)] + "/";
     return pre + "/" + s[view] + "/";
   }
   var filter = { cat: "all", country: "all", status: "all" };
@@ -594,7 +688,7 @@
         body += "<ul>" + s.list.map(function (li) { return "<li>" + esc(TC(li)) + "</li>"; }).join("") + "</ul>";
         body += '<div class="svc-projects">' + rel.slice(0, 6).map(function (p) { return '<a href="' + href("p-" + p.slug) + '">' + esc(TC(L(p.title))) + "</a>"; }).join("") + "</div>";
       }
-      body += '<a class="arrow" href="' + href("projects-" + k) + '">' + esc(x.seeRelated) + "</a></article>";
+      body += (lang === "ar" || full ? '<a class="arrow" href="' + href("projects-" + k) + '">' + esc(x.seeRelated) + "</a>" : '<a class="arrow" href="' + href("s-" + k) + '">' + esc(x.codesMore) + "</a>") + "</article>";
       return body;
     }).join("") + "</div>";
   }
@@ -649,10 +743,43 @@
       ctaBlock();
   }
 
+  function svcRows(k) { return t().approach[{ water: 0, rc: 1, steel: 2 }[k]].rows; }
+  function svcProjects(k) {
+    var list = P.filter(function (p) { return p.cat === k; });
+    // Ana sayfada seçilmiş projeler önde, sonra genel sıra
+    var f = list.filter(function (p) { return p.featured; }).sort(function (a, b) { return a.featured - b.featured; });
+    return f.concat(list.filter(function (p) { return !p.featured; }));
+  }
   function viewServices() {
     var x = t();
+    if (lang !== "ar") {
+      return '<section class="page-head"><div class="wrap"><h1>' + esc(TC(x.servicesTitle)) + '</h1><p class="lead">' + esc(x.svcLead) + "</p></div></section>" +
+        '<section class="block"><div class="wrap"><div class="services">' + SVC.map(function (k, n) {
+          var s = x.services[k], pg = x.svcPages[k], im = SVC_IMG[k], rel = svcProjects(k);
+          return '<a class="service svc-link" href="' + href("s-" + k) + '"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img loading="lazy" src="' + img(im[0]) + '" alt=""></div>' +
+            '<div class="svc-no">0' + (n + 1) + '<span class="num">' + rel.length + " " + (lang === "en" ? (rel.length === 1 ? "project" : "projects") : "proje") + "</span></div>" +
+            "<h2>" + esc(TC(pg.title)) + "</h2><p>" + esc(s.text) + '</p><span class="arrow">' + esc(x.codesMore) + "</span></a>";
+        }).join("") + "</div></div></section>" + ctaBlock();
+    }
     return '<section class="page-head"><div class="wrap"><h1>' + esc(TC(x.servicesTitle)) + '</h1><p class="lead">' + esc(x.servicesLead) + "</p></div></section>" +
       '<section class="block"><div class="wrap">' + servicesBlock(true) + "</div></section>" + approachBlock() + ctaBlock();
+  }
+
+  function viewService(k) {
+    var x = t(), s = x.services[k], pg = x.svcPages && x.svcPages[k], im = SVC_IMG[k];
+    if (!pg) return viewServices();
+    var list = pg.list || s.list, rel = svcProjects(k);
+    var notes = N.filter(function (n) { return n.cat === k; });
+    var html = '<section class="page-head"><div class="wrap"><a class="label" href="' + href("services") + '">' + esc(x.nav.services) + '</a><h1 class="svc-h1">' + esc(TC(pg.title)) + '</h1><p class="lead">' + esc(pg.lead) + "</p></div></section>" +
+      '<section class="block block-tight"><div class="wrap svc-page"><div class="svc-main">' + pg.intro.map(function (q) { return "<p>" + esc(q) + "</p>"; }).join("") +
+      "<h2>" + esc(TC(x.svcScope)) + '</h2><ul class="svc-list">' + list.map(function (li) { return "<li>" + esc(TC(li)) + "</li>"; }).join("") + "</ul></div>" +
+      '<aside class="svc-side"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img src="' + img(im[0]) + '" alt=""></div>' +
+      '<table class="tblock"><caption>' + esc(TC(x.approachTitle)) + '</caption><thead><tr><th>' + esc(x.approachHead[0]) + "</th><th>" + esc(x.approachHead[1]) + "</th></tr></thead><tbody>" +
+      svcRows(k).map(function (r) { return "<tr><td>" + esc(r[0]) + '</td><td class="code">' + esc(r[1]) + "</td></tr>"; }).join("") + '</tbody></table><p class="svc-note">' + esc(x.approachLead) + "</p></aside></div></section>";
+    if (rel.length) html += '<section class="block block-tight"><div class="wrap">' + sectionHead(x.svcProjects, "", '<a class="arrow" href="' + href("projects-" + k) + '">' + esc(TC(x.allProjects)) + "</a>") + '<div class="grid">' + rel.slice(0, 6).map(card).join("") + "</div></div></section>";
+    if (notes.length) html += '<section class="block block-tight"><div class="wrap">' + sectionHead(x.svcNotes, "", '<a class="arrow" href="' + href("notes") + '">' + esc(TC(x.allNotes)) + "</a>") + '<div class="notes-list">' + notes.slice(0, 3).map(noteCard).join("") + "</div></div></section>";
+    html += '<section class="block block-tight"><div class="wrap"><span class="label">' + esc(x.svcOther) + '</span><div class="svc-other">' + SVC.filter(function (q) { return q !== k; }).map(function (q) { return '<a class="arrow" href="' + href("s-" + q) + '">' + esc(TC(x.svcPages[q].title)) + "</a>"; }).join("") + "</div></div></section>";
+    return html + ctaBlock();
   }
 
   function viewProjects() {
@@ -842,7 +969,8 @@
   function metaFor(v) {
     var x = t(), base = "Vektörel Yapı", title, desc = x.metaDesc;
     if (v === "" || v === "home") title = base + " · " + TC(x.heroTitle);
-    else if (v === "services") title = TC(x.servicesTitle) + " · " + base;
+    else if (v === "services") { if (x.svcMetaTitle) { title = TC(x.svcMetaTitle) + " · " + base; desc = x.svcMetaDesc; } else title = TC(x.servicesTitle) + " · " + base; }
+    else if (v.indexOf("s-") === 0 && x.svcPages && x.svcPages[v.slice(2)]) { title = TC(x.svcPages[v.slice(2)].title) + " · " + base; desc = x.svcPages[v.slice(2)].meta; }
     else if (v === "projects" || v.indexOf("projects-") === 0) { var c = v.split("-")[1]; title = (c ? TC(x.cats[c]) + " · " : "") + TC(x.projectsTitle) + " · " + base; }
     else if (v.indexOf("p-") === 0) {
       var p = null; P.forEach(function (q) { if (q.slug === v.slice(2)) p = q; });
@@ -865,6 +993,7 @@
     var html, active = v;
     if (v === "") html = viewHome();
     else if (v === "services") html = viewServices();
+    else if (v.indexOf("s-") === 0) { html = viewService(v.slice(2)); active = "services"; }
     else if (v === "projects" || v.indexOf("projects-") === 0) {
       var c = v.split("-")[1];
       filter.cat = c || "all";
@@ -885,7 +1014,7 @@
   // Yayın sürümü üreticisi (tools/build.js) için: DOM'a dokunmadan sayfa parçalarını verir.
   if (SITE.prerender) {
     SITE.api = {
-      P: P, N: N, T: T, pathFor: pathFor, TC: TC, L: L, keyFact: keyFact, img: img, MAIL: MAIL, PHONE: PHONE,
+      P: P, N: N, T: T, SVC: SVC, pathFor: pathFor, TC: TC, L: L, keyFact: keyFact, img: img, MAIL: MAIL, PHONE: PHONE,
       page: function (v, l) {
         lang = l;
         var r = viewFor(v);

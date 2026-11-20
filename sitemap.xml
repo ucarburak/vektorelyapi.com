@@ -181,6 +181,42 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/privacy/"/>
   </url>
   <url>
+    <loc>https://www.vektorelyapi.com/hizmetler/aritma-tesisi-statik-proje/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/hizmetler/aritma-tesisi-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/services/treatment-plant-structural-design/"/>
+  </url>
+  <url>
+    <loc>https://www.vektorelyapi.com/en/services/treatment-plant-structural-design/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/hizmetler/aritma-tesisi-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/services/treatment-plant-structural-design/"/>
+  </url>
+  <url>
+    <loc>https://www.vektorelyapi.com/hizmetler/betonarme-statik-proje/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/hizmetler/betonarme-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/services/reinforced-concrete-structural-design/"/>
+  </url>
+  <url>
+    <loc>https://www.vektorelyapi.com/en/services/reinforced-concrete-structural-design/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/hizmetler/betonarme-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/services/reinforced-concrete-structural-design/"/>
+  </url>
+  <url>
+    <loc>https://www.vektorelyapi.com/hizmetler/celik-yapi-statik-proje/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/hizmetler/celik-yapi-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/services/steel-structural-design/"/>
+  </url>
+  <url>
+    <loc>https://www.vektorelyapi.com/en/services/steel-structural-design/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/hizmetler/celik-yapi-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/services/steel-structural-design/"/>
+  </url>
+  <url>
     <loc>https://www.vektorelyapi.com/projeler/novart-atolye/</loc>
     <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/projeler/novart-atolye/"/>

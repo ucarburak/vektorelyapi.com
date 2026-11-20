@@ -157,6 +157,24 @@ p { margin: 0; }
 .service ul { margin: 6px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .service li { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 0.98rem; color: var(--soft); }
 .service .arrow { margin-top: auto; padding-top: 8px; align-self: flex-start; }
+/* Hizmet genel sayfası (4 hizmet) ve hizmet sayfaları */
+.svc-link { color: inherit; text-decoration: none; }
+.svc-link h2 { font: 600 1.9rem/1.1 var(--font-display); }
+.svc-link:hover h2 { color: var(--accent); }
+.svc-h1 { margin-top: 14px; max-width: 22ch; }
+.svc-page { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.svc-main p { color: var(--soft); font-size: 1.08rem; line-height: 1.65; margin: 0 0 18px; max-width: 64ch; }
+.svc-main h2 { font: 600 1.6rem/1.1 var(--font-display); margin: 36px 0 14px; }
+.svc-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); columns: 2; column-gap: 32px; }
+.svc-list li { padding: 11px 0; border-bottom: 1px solid var(--line); color: var(--soft); break-inside: avoid; }
+.svc-side { display: flex; flex-direction: column; gap: 28px; }
+.svc-side .svc-img { margin: 0; }
+.svc-note { color: var(--muted); font-size: 0.92rem; line-height: 1.55; margin: -12px 0 0; }
+.svc-other { display: flex; flex-wrap: wrap; gap: 14px 36px; margin-top: 16px; }
+@media (max-width: 960px) {
+  .svc-page { grid-template-columns: 1fr; gap: 40px; }
+  .svc-list { columns: 1; }
+}
 .svc-projects { display: flex; flex-direction: column; gap: 6px; font-size: 0.95rem; }
 .svc-projects a { color: var(--muted); text-decoration: none; }
 .svc-projects a:hover { color: var(--white); }
