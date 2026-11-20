@@ -725,7 +725,7 @@
 
   // Teknik notlar
   function fmtDate(d) { var m = d.split("-"), x = lang === "ar" ? T.en : t(); return parseInt(m[2], 10) + " " + x.months[parseInt(m[1], 10) - 1] + " " + m[0]; }
-  function noteMeta(n) { var x = lang === "ar" ? T.en : t(); return '<span class="note-meta">' + esc(TC(x.cats[n.cat])) + " · " + esc(fmtDate(n.date)) + "</span>"; }
+  function noteMeta(n) { var x = lang === "ar" ? T.en : t(); return '<span class="note-meta">' + (n.draft ? '<b class="draft-tag">' + (lang === "tr" ? "Taslak" : "Draft") + "</b> " : "") + esc(TC(x.cats[n.cat])) + " · " + esc(fmtDate(n.date)) + "</span>"; }
   function noteCard(n) {
     return '<a class="ncard" href="' + href("n-" + n.slug) + '">' + (n.image ? media(n.image, "", false) : "") +
       '<div class="ncard-body">' + noteMeta(n) + "<h3>" + esc(TC(L(n.title))) + "</h3><p>" + esc(L(n.summary)) + '</p><span class="arrow">' + esc(t().readMore) + "</span></div></a>";
