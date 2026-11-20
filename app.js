@@ -16,7 +16,14 @@
 
   var T = {
     tr: {
-      nav: { home: "Ana Sayfa", services: "Hizmetler", projects: "Projeler", about: "Hakkımızda", contact: "İletişim" },
+      nav: { home: "Ana Sayfa", services: "Hizmetler", projects: "Projeler", notes: "Teknik Notlar", about: "Hakkımızda", contact: "İletişim" },
+      notesTitle: "Teknik Notlar",
+      notesLead: "Su tutan yapılar, betonarme ve çelik yapıların tasarımına dair kısa ve genel notlar.",
+      readMore: "Devamını Oku",
+      notesOther: "Diğer Teknik Notlar",
+      allNotes: "Tüm Teknik Notlar",
+      noteRelated: "İlgili Proje",
+      months: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
       draft: "Önizleme sürümü, yayında değil. Sarı işaretli alanlar sizden bilgi bekliyor.",
       metaDesc: "Betonarme ve çelik yapılar için statik proje. Uzmanlık alanımız su tutan yapılar ve arıtma tesisleri. Türkiye, Libya, Irak.",
       heroTitle: "Betonarme ve Çelik Yapılar İçin Statik Proje",
@@ -164,7 +171,14 @@
       }
     },
     en: {
-      nav: { home: "Home", services: "Services", projects: "Projects", about: "About Us", contact: "Contact" },
+      nav: { home: "Home", services: "Services", projects: "Projects", notes: "Technical Notes", about: "About Us", contact: "Contact" },
+      notesTitle: "Technical Notes",
+      notesLead: "Short, general notes on the design of water-retaining, reinforced concrete and steel structures.",
+      readMore: "Read More",
+      notesOther: "More Technical Notes",
+      allNotes: "All Technical Notes",
+      noteRelated: "Related Project",
+      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
       draft: "Preview, not published. Fields marked in yellow are waiting for your input.",
       metaDesc: "Structural design for concrete and steel structures. Specialists in water-retaining structures and treatment plants. Türkiye, Libya, Iraq.",
       heroTitle: "Structural Design For Concrete and Steel Structures",
@@ -445,6 +459,9 @@
   }
 
   var P = window.PROJECTS || [];
+  // Teknik notlar (notes.js), en yeni önce. Arapçası yok: Arapça sayfalar İngilizce nota bağlanır.
+  var N = (window.NOTES || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+  function enOnly(view) { return view === "privacy" || view === "notes" || (view || "").indexOf("n-") === 0; }
 
   // Sıra: biten işler teslim tarihine göre yeniden eskiye; tarihi olmayanlar en sonda.
   // Devam edenler en önde değil, ilk ONGOING_AFTER biten işin arkasına girer (Burak'ın isteği).
@@ -475,19 +492,20 @@
   var lang = "tr";
   // Yayın adresleri: /projeler/suluq-aat/, /en/projects/suluq-aat/ …
   var SEG = {
-    tr: { services: "hizmetler", projects: "projeler", about: "hakkinda", contact: "iletisim", privacy: "gizlilik", water: "aritma", steel: "celik", rc: "betonarme" },
-    en: { services: "services", projects: "projects", about: "about", contact: "contact", privacy: "privacy", water: "water", steel: "steel", rc: "concrete" }
+    tr: { services: "hizmetler", projects: "projeler", about: "hakkinda", contact: "iletisim", privacy: "gizlilik", notes: "teknik-notlar", water: "aritma", steel: "celik", rc: "betonarme" },
+    en: { services: "services", projects: "projects", about: "about", contact: "contact", privacy: "privacy", notes: "technical-notes", water: "water", steel: "steel", rc: "concrete" }
   };
   SEG.ar = SEG.en; // /ar/services/, /ar/projects/suluq-aat/ …
   // Dil düğmeleri. Yayında Arapça, Burak onaylayana kadar kapalı: build.js SITE.langs ile ["tr","en"] verir.
   var LANGS = SITE.langs || ["tr", "en", "ar"];
   function pathFor(view, l) {
     l = l || lang;
-    if (l === "ar" && view === "privacy") l = "en"; // gizlilik metni Arapçaya çevrilmedi
+    if (l === "ar" && enOnly(view)) l = "en"; // gizlilik metni ve teknik notlar Arapçaya çevrilmedi
     var s = SEG[l], pre = l === "tr" ? "" : "/" + l;
     if (!view || view === "home") return pre + "/";
     if (view.indexOf("projects-") === 0) return pre + "/" + s.projects + "/" + s[view.slice(9)] + "/";
     if (view.indexOf("p-") === 0) return pre + "/" + s.projects + "/" + view.slice(2) + "/";
+    if (view.indexOf("n-") === 0) return pre + "/" + s.notes + "/" + view.slice(2) + "/";
     return pre + "/" + s[view] + "/";
   }
   var filter = { cat: "all", country: "all", status: "all" };
@@ -508,7 +526,7 @@
   function href(view, l) {
     l = l || lang;
     if (STATIC) return pathFor(view, l);
-    if (l === "ar" && view === "privacy") l = "en";
+    if (l === "ar" && enOnly(view)) l = "en";
     if (l !== "tr") return "#" + (view ? l + "-" + view : l);
     return "#" + (view || "home");
   }
@@ -705,6 +723,38 @@
       ctaBlock();
   }
 
+  // Teknik notlar
+  function fmtDate(d) { var m = d.split("-"), x = lang === "ar" ? T.en : t(); return parseInt(m[2], 10) + " " + x.months[parseInt(m[1], 10) - 1] + " " + m[0]; }
+  function noteMeta(n) { var x = lang === "ar" ? T.en : t(); return '<span class="note-meta">' + esc(TC(x.cats[n.cat])) + " · " + esc(fmtDate(n.date)) + "</span>"; }
+  function noteCard(n) {
+    return '<a class="ncard" href="' + href("n-" + n.slug) + '">' + (n.image ? media(n.image, "", false) : "") +
+      '<div class="ncard-body">' + noteMeta(n) + "<h3>" + esc(TC(L(n.title))) + "</h3><p>" + esc(L(n.summary)) + '</p><span class="arrow">' + esc(t().readMore) + "</span></div></a>";
+  }
+  function viewNotes() {
+    var x = t();
+    return '<section class="page-head"><div class="wrap"><h1>' + esc(TC(x.notesTitle)) + '</h1><p class="lead">' + esc(x.notesLead) + "</p></div></section>" +
+      '<section class="block block-tight"><div class="wrap"><div class="notes-list">' + N.map(noteCard).join("") + "</div></div></section>" + ctaBlock();
+  }
+  function viewNote(slug) {
+    var x = t(), n = null;
+    N.forEach(function (q) { if (q.slug === slug) n = q; });
+    if (!n) return viewNotes();
+    var body = (n.body[lang] || n.body.en || n.body.tr).map(function (b) {
+      return b.indexOf("## ") === 0 ? "<h2>" + esc(TC(b.slice(3))) + "</h2>" : "<p>" + esc(b) + "</p>";
+    }).join("");
+    var rel = null; P.forEach(function (q) { if (q.slug === n.related) rel = q; });
+    var others = N.filter(function (q) { return q.slug !== n.slug; }).slice(0, 3);
+    return '<section class="page-head"><div class="wrap article"><a class="back" href="' + href("notes") + '">' + esc(TC(x.allNotes)) + "</a>" +
+      "<div>" + noteMeta(n) + "</div><h1>" + esc(TC(L(n.title))) + '</h1><p class="lead">' + esc(L(n.summary)) + "</p></div></section>" +
+      '<section class="block block-tight"><div class="wrap article">' +
+      (n.image ? '<figure class="article-fig">' + media(n.image, "", true) + "<figcaption>" + esc(L(n.image.alt)) + "</figcaption></figure>" : "") +
+      '<div class="prose article-body">' + body + "</div>" +
+      (rel ? '<div class="article-rel"><span class="label">' + esc(x.noteRelated) + '</span><div class="article-rel-card">' + card(rel) + "</div></div>" : "") +
+      "</div></section>" +
+      (others.length ? '<section class="block" style="padding-top:24px"><div class="wrap">' + sectionHead(x.notesOther, "", '<a class="arrow" href="' + href("notes") + '">' + esc(TC(x.allNotes)) + "</a>") + '<div class="notes-list">' + others.map(noteCard).join("") + "</div></div></section>" : "") +
+      ctaBlock();
+  }
+
   function viewAbout() {
     var x = t();
     return '<section class="page-head"><div class="wrap"><h1>' + esc(TC(x.aboutTitle)) + "</h1></div></section>" +
@@ -743,7 +793,9 @@
   // Başlık çubuğu ve sayfa altı parçaları (önizlemede DOM'a yazılır, yayın sürümünde build.js sayfaya basar).
   function chromeParts(active) {
     var x = t();
-    var nav = [["", x.nav.home], ["services", x.nav.services], ["projects", x.nav.projects], ["about", x.nav.about], ["contact", x.nav.contact]];
+    var nav = [["", x.nav.home], ["services", x.nav.services], ["projects", x.nav.projects]];
+    if (N.length && x.nav.notes) nav.push(["notes", x.nav.notes]); // Arapça menüde yok (notlar yalnız TR/EN)
+    nav.push(["about", x.nav.about], ["contact", x.nav.contact]);
     return {
       draft: x.draft,
       nav: nav.map(function (n) { return '<a href="' + href(n[0]) + '" data-v="' + n[0] + '"' + (n[0] === active ? ' class="on"' : "") + ">" + esc(n[1]) + "</a>"; }).join(""),
@@ -797,6 +849,11 @@
       if (p) { title = TC(L(p.title)) + " · " + base; desc = [TC(L(p.title)), L(p.place) || x.countries[p.country], keyFact(p)].filter(Boolean).join(" · "); }
       else title = base;
     }
+    else if (v === "notes") { title = TC(x.notesTitle) + " · " + base; desc = x.notesLead; }
+    else if (v.indexOf("n-") === 0) {
+      var n = null; N.forEach(function (q) { if (q.slug === v.slice(2)) n = q; });
+      if (n) { title = TC(L(n.title)) + " · " + base; desc = L(n.summary); } else title = base;
+    }
     else if (v === "about") title = TC(x.aboutTitle) + " · " + base;
     else if (v === "contact") title = TC(x.contactTitle) + " · " + base;
     else if (v === "privacy") { title = TC(x.privacyLink) + " · " + base; desc = x.privacy.lead; }
@@ -816,6 +873,8 @@
       html = viewProjects(); active = "projects";
     }
     else if (v.indexOf("p-") === 0) { html = viewProject(v.slice(2)); active = "projects"; }
+    else if (v === "notes") html = viewNotes();
+    else if (v.indexOf("n-") === 0) { html = viewNote(v.slice(2)); active = "notes"; }
     else if (v === "about") html = viewAbout();
     else if (v === "contact") html = viewContact();
     else if (v === "privacy") html = viewPrivacy();
@@ -826,7 +885,7 @@
   // Yayın sürümü üreticisi (tools/build.js) için: DOM'a dokunmadan sayfa parçalarını verir.
   if (SITE.prerender) {
     SITE.api = {
-      P: P, T: T, pathFor: pathFor, TC: TC, L: L, keyFact: keyFact, img: img, MAIL: MAIL, PHONE: PHONE,
+      P: P, N: N, T: T, pathFor: pathFor, TC: TC, L: L, keyFact: keyFact, img: img, MAIL: MAIL, PHONE: PHONE,
       page: function (v, l) {
         lang = l;
         var r = viewFor(v);
