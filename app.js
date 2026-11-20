@@ -837,11 +837,15 @@
       gallery = '<div class="gallery">' + thumb(p, "g-main") + "</div>";
     }
 
+    // Proje açıklaması (TR/EN; Arapçada uzun metin yok). draftDesc yalnız önizlemede, Burak onaylayınca desc olur.
+    var dsc = lang === "ar" ? null : (p.desc || (!STATIC && p.draftDesc) || null);
+    var svcLink = lang === "ar" || !x.svcPages || !x.svcPages[p.cat] ? "" : '<a class="arrow" href="' + href("s-" + p.cat) + '">' + esc(TC(x.svcPages[p.cat].title)) + "</a>";
+    var descBlock = dsc || svcLink ? '<div class="p-desc">' + (dsc ? "<p>" + (p.desc ? "" : '<b class="draft-tag">' + (lang === "tr" ? "Taslak" : "Draft") + "</b> ") + esc(L(dsc)) + "</p>" : "") + svcLink + "</div>" : "";
     var pending = p.pending ? '<div class="pending"><strong>' + esc(x.pendingTitle) + "</strong><ul>" + p.pending.map(function (q) { return "<li>" + esc(L(q)) + "</li>"; }).join("") + "</ul></div>" : "";
     var related = P.filter(function (q) { return q.cat === p.cat && q.slug !== p.slug && q.images.length; }).slice(0, 3);
 
     return hero + strip +
-      '<section class="block block-tight" style="padding-top:64px"><div class="wrap project-grid">' + gallery +
+      '<section class="block block-tight" style="padding-top:64px"><div class="wrap project-grid"><div class="p-main">' + gallery + descBlock + "</div>" +
       '<aside><div class="antet-card"><span class="label">' + esc(x.antetTitle) + '</span><table class="antet"><tbody>' +
       rows.map(function (r) { return '<tr><th scope="row">' + esc(x.facts[r[0]] || r[0]) + "</th><td" + (r[0] === "capacity" || r[0] === "structures" || r[0] === "plants" || r[0] === "area" || r[0] === "steel" ? ' class="num"' : "") + ">" + esc(r[1]) + "</td></tr>"; }).join("") +
       '</tbody></table><a class="btn btn-accent" href="' + waLink(x.waSimilar(title)) + '" target="_blank" rel="noopener">' + esc(x.askSimilar) + "</a></div>" + pending + "</aside></div>" +
