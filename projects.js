@@ -121,10 +121,52 @@ window.PROJECTS = [
   "year": 2025,
   "images": [
    {
+    "src": "suluq-14.jpg",
+    "alt": {
+     "tr": "Suluq AAT, tamamlanmış tesis; havuzlar ve dairesel çöktürme havuzları",
+     "en": "Suluq WWTP, completed plant; basins and circular clarifiers"
+    }
+   },
+   {
+    "src": "suluq-15.jpg",
+    "alt": {
+     "tr": "Betonarme havuzlar ve servis köprüleri, tamamlanmış tesis",
+     "en": "Reinforced concrete basins and service bridges, completed plant"
+    }
+   },
+   {
+    "src": "suluq-16.jpg",
+    "alt": {
+     "tr": "Suluq AAT, tesisin tamamı havadan",
+     "en": "Suluq WWTP, the whole plant from the air"
+    }
+   },
+   {
+    "src": "suluq-17.jpg",
+    "alt": {
+     "tr": "Havuz duvarları ve servis köprüleri, yakından",
+     "en": "Basin walls and service bridges, close-up"
+    }
+   },
+   {
+    "src": "suluq-18.jpg",
+    "alt": {
+     "tr": "Dairesel çöktürme havuzları, tepeden",
+     "en": "Circular clarifiers, top view"
+    }
+   },
+   {
+    "src": "suluq-19.jpg",
+    "alt": {
+     "tr": "Giriş yapısı ve servis binaları",
+     "en": "Inlet works and service buildings"
+    }
+   },
+   {
     "src": "suluq-8.jpg",
     "alt": {
-     "tr": "Suluq AAT, kuş bakışı drone fotoğrafı",
-     "en": "Suluq WWTP, top-down drone photo"
+     "tr": "Suluq AAT inşaat sırasında, kuş bakışı",
+     "en": "Suluq WWTP during construction, top-down view"
     }
    },
    {
@@ -137,15 +179,15 @@ window.PROJECTS = [
    {
     "src": "suluq-9.jpg",
     "alt": {
-     "tr": "Havuzlar ve dairesel çöktürme havuzları, havadan",
-     "en": "Basins and circular clarifiers from the air"
+     "tr": "Havuzlar ve dairesel çöktürme havuzları, inşaat sırasında",
+     "en": "Basins and circular clarifiers during construction"
     }
    },
    {
     "src": "suluq-10.jpg",
     "alt": {
-     "tr": "Betonarme havuzlar ve servis köprüleri",
-     "en": "Reinforced concrete basins and service bridges"
+     "tr": "Betonarme havuzlar ve servis köprüleri, inşaat sırasında",
+     "en": "Reinforced concrete basins and service bridges during construction"
     }
    },
    {
@@ -158,8 +200,8 @@ window.PROJECTS = [
    {
     "src": "suluq-12.jpg",
     "alt": {
-     "tr": "Havuzlar, tepeden görünüm",
-     "en": "Basins, top view"
+     "tr": "Havuzlar inşaat sırasında, tepeden",
+     "en": "Basins during construction, top view"
     }
    },
    {

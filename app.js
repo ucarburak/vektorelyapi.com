@@ -810,7 +810,7 @@
     if (p.client) rows.push(["client", L(p.client)]);
     if (p.scope) rows.push(["scope", L(p.scope)]);
     p.facts.forEach(function (f) { rows.push([f[0], L(f[1])]); });
-    rows.push(["category", x.cats[p.cat] + (p.kind === "tender" ? " · " + x.tender : "")]);
+    rows.push(["category", TC(x.cats[p.cat] + (p.kind === "tender" ? " · " + x.tender : ""))]);
 
     // büyük rakam şeridi: kısa, sayısal künye bilgileri
     var order = ["capacity", "area", "structures", "plants", "steel", "storeys", "codes", "delivered"];
