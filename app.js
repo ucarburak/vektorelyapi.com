@@ -626,6 +626,21 @@
   }
   function waLink(text) { return "https://wa.me/" + WA + "?text=" + encodeURIComponent(text || t().waText); }
   function img(p) { return (STATIC ? "/img/" : "img/") + p; }
+  // Küçük gösterilen görseller (kart, küçük resim): yayında tools/build.js her görselin 800 px'lik
+  // kopyasını /img/k/ altına üretir; tarayıcı ekran genişliğine göre küçüğü ya da aslını seçer.
+  // Önizlemede (tek dosya) kopya yok, yalnız asıl görsel kullanılır.
+  var SZ = {
+    card: "(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 720px",
+    note: "(max-width: 560px) 100vw, (max-width: 960px) 50vw, 420px",
+    svc: "(max-width: 960px) 100vw, 420px",
+    side: "(max-width: 960px) 100vw, 520px",
+    tiny: "(max-width: 700px) 30vw, 160px"
+  };
+  function imgAttrs(p, sizes) {
+    var a = 'src="' + img(p) + '"';
+    if (STATIC && sizes) a += ' srcset="/img/k/' + p + " 800w, /img/" + p + ' 1600w" sizes="' + sizes + '"';
+    return a;
+  }
   function factVal(p, key) { for (var i = 0; i < p.facts.length; i++) if (p.facts[i][0] === key) return L(p.facts[i][1]); return ""; }
   function keyFact(p) {
     var v = factVal(p, "capacity"); if (v) return v;
@@ -635,16 +650,16 @@
   }
   function year(p) { return p.year || ""; }
 
-  function media(im, cls, eager) {
-    return '<div class="media ' + (im.fit === "contain" ? "is-model " : "") + (cls || "") + '"><img ' + (eager ? "" : 'loading="lazy" ') + 'src="' + img(im.src) + '" alt="' + esc(L(im.alt)) + '"></div>';
+  function media(im, cls, eager, sizes) {
+    return '<div class="media ' + (im.fit === "contain" ? "is-model " : "") + (cls || "") + '"><img ' + (eager ? "" : 'loading="lazy" ') + imgAttrs(im.src, sizes) + ' alt="' + esc(L(im.alt)) + '"></div>';
   }
-  function thumb(p, cls) {
+  function thumb(p, cls, sizes) {
     var im = p.images[0];
     if (!im) {
       // Görseli olmayan proje: boş ızgara yerine sade, tipografik bir alan.
       return '<div class="ph ' + (cls || "") + '" aria-hidden="true"><span class="ph-fact num">' + esc(keyFact(p)) + "</span></div>";
     }
-    return media(im, cls);
+    return media(im, cls, false, sizes);
   }
   function metaLine(p) {
     var parts = [t().countries[p.country]];
@@ -657,7 +672,7 @@
     if (p.status === "ongoing") tags += '<span class="tag">' + esc(t().statusOngoing) + "</span>";
     if (p.kind === "tender") tags += '<span class="tag">' + esc(t().tender) + "</span>";
     if (p.pending) tags += '<span class="tag pending-tag" title="' + esc(t().pendingTitle) + '">!</span>';
-    return '<a class="pcard" href="' + href("p-" + p.slug) + '">' + thumb(p) +
+    return '<a class="pcard" href="' + href("p-" + p.slug) + '">' + thumb(p, "", SZ.card) +
       (tags ? '<div class="tags">' + tags + "</div>" : "") +
       '<div class="pcard-body"><span class="label num">' + esc(metaLine(p)) + "</span>" +
       "<h3>" + esc(TC(L(p.title))) + "</h3></div></a>";
@@ -681,7 +696,7 @@
       var s = x.services[k];
       var rel = P.filter(function (p) { return p.cat === k; });
       var simg = { water: ["suluq-12.jpg", ""], rc: ["k1-1.jpg", " is-model"], steel: ["novart-1.jpg", " is-model"] }[k];
-      var body = '<article class="service" id="svc-' + k + '"><div class="media svc-img' + simg[1] + '"><img loading="lazy" src="' + img(simg[0]) + '" alt=""></div>' +
+      var body = '<article class="service" id="svc-' + k + '"><div class="media svc-img' + simg[1] + '"><img loading="lazy" ' + imgAttrs(simg[0], SZ.svc) + ' alt=""></div>' +
         '<div class="svc-no">0' + (n + 1) + '<span class="num">' + (lang === "ar" ? x.unitProjects(rel.length) : rel.length + " " + (lang === "en" ? "projects" : "proje")) + "</span></div>" +
         "<h3>" + esc(TC(s.title)) + "</h3><p>" + esc(s.text) + "</p>";
       if (full) {
@@ -730,7 +745,7 @@
   function viewHome() {
     var x = t(), c = counts();
     var featured = P.filter(function (p) { return p.featured; }).sort(function (a, b) { return a.featured - b.featured; });
-    return '<section class="hero"><img class="hero-img" src="' + img("suluq-7.jpg") + '" alt="' + esc(x.heroAlt || (lang === "en" ? "Suluq wastewater treatment plant site from the air" : "Suluq atıksu arıtma tesisi şantiyesi, havadan")) + '"><div class="scrim"></div>' +
+    return '<section class="hero"><img class="hero-img" fetchpriority="high" src="' + img("suluq-7.jpg") + '" alt="' + esc(x.heroAlt || (lang === "en" ? "Suluq wastewater treatment plant site from the air" : "Suluq atıksu arıtma tesisi şantiyesi, havadan")) + '"><div class="scrim"></div>' +
       '<div class="wrap hero-body"><div class="eyebrow label">' + esc(x.eyebrow) + "</div>" +
       "<h1>" + esc(TC(x.heroTitle)) + '</h1><p class="lead">' + esc(x.heroLead) + "</p>" +
       '<div class="actions"><a class="btn btn-accent" href="' + href("projects") + '">' + esc(TC(x.seeProjects)) + '</a><a class="btn btn-ghost" href="' + waLink() + '" target="_blank" rel="noopener">' + esc(TC(x.whatsapp)) + "</a></div>" +
@@ -756,7 +771,7 @@
       return '<section class="page-head"><div class="wrap"><h1>' + esc(TC(x.servicesTitle)) + '</h1><p class="lead">' + esc(x.svcLead) + "</p></div></section>" +
         '<section class="block"><div class="wrap"><div class="services">' + SVC.map(function (k, n) {
           var s = x.services[k], pg = x.svcPages[k], im = SVC_IMG[k], rel = svcProjects(k);
-          return '<a class="service svc-link" href="' + href("s-" + k) + '"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img loading="lazy" src="' + img(im[0]) + '" alt=""></div>' +
+          return '<a class="service svc-link" href="' + href("s-" + k) + '"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img loading="lazy" ' + imgAttrs(im[0], SZ.svc) + ' alt=""></div>' +
             '<div class="svc-no">0' + (n + 1) + '<span class="num">' + rel.length + " " + (lang === "en" ? (rel.length === 1 ? "project" : "projects") : "proje") + "</span></div>" +
             "<h2>" + esc(TC(pg.title)) + "</h2><p>" + esc(s.text) + '</p><span class="arrow">' + esc(x.codesMore) + "</span></a>";
         }).join("") + "</div></div></section>" + ctaBlock();
@@ -773,7 +788,7 @@
     var html = '<section class="page-head"><div class="wrap"><a class="label" href="' + href("services") + '">' + esc(x.nav.services) + '</a><h1 class="svc-h1">' + esc(TC(pg.title)) + '</h1><p class="lead">' + esc(pg.lead) + "</p></div></section>" +
       '<section class="block block-tight"><div class="wrap svc-page"><div class="svc-main">' + pg.intro.map(function (q) { return "<p>" + esc(q) + "</p>"; }).join("") +
       "<h2>" + esc(TC(x.svcScope)) + '</h2><ul class="svc-list">' + list.map(function (li) { return "<li>" + esc(TC(li)) + "</li>"; }).join("") + "</ul></div>" +
-      '<aside class="svc-side"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img src="' + img(im[0]) + '" alt=""></div>' +
+      '<aside class="svc-side"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img ' + imgAttrs(im[0], SZ.side) + ' alt=""></div>' +
       '<table class="tblock"><caption>' + esc(TC(x.approachTitle)) + '</caption><thead><tr><th>' + esc(x.approachHead[0]) + "</th><th>" + esc(x.approachHead[1]) + "</th></tr></thead><tbody>" +
       svcRows(k).map(function (r) { return "<tr><td>" + esc(r[0]) + '</td><td class="code">' + esc(r[1]) + "</td></tr>"; }).join("") + '</tbody></table><p class="svc-note">' + esc(x.approachLead) + "</p></aside></div></section>";
     if (rel.length) html += '<section class="block block-tight"><div class="wrap">' + sectionHead(x.svcProjects, "", '<a class="arrow" href="' + href("projects-" + k) + '">' + esc(TC(x.allProjects)) + "</a>") + '<div class="grid">' + rel.slice(0, 6).map(card).join("") + "</div></div></section>";
@@ -822,7 +837,7 @@
     var heroIm = null; for (var h = 0; h < p.images.length; h++) if (p.images[h].fit !== "contain") { heroIm = p.images[h]; break; }
     var tags = '<span class="tag tag-accent">' + esc(x.cats[p.cat]) + '</span><span class="tag num">' + esc(x.countries[p.country]) + (year(p) ? " · " + year(p) : "") + "</span>" +
       (p.kind === "tender" ? '<span class="tag">' + esc(x.tender) + "</span>" : "") + (p.status === "ongoing" ? '<span class="tag">' + esc(x.statusOngoing) + "</span>" : "");
-    var hero = '<section class="p-hero' + (heroIm ? "" : " no-img") + '">' + (heroIm ? '<img class="hero-img" src="' + img(heroIm.src) + '" alt="' + esc(L(heroIm.alt)) + '"><div class="scrim"></div>' : "") +
+    var hero = '<section class="p-hero' + (heroIm ? "" : " no-img") + '">' + (heroIm ? '<img class="hero-img" fetchpriority="high" src="' + img(heroIm.src) + '" alt="' + esc(L(heroIm.alt)) + '"><div class="scrim"></div>' : "") +
       '<div class="wrap hero-body"><a class="back" href="' + href("projects") + '">' + esc(x.back) + '</a><div class="tags">' + tags + "</div><h1>" + esc(title) + "</h1></div></section>";
 
     var gallery;
@@ -831,8 +846,8 @@
       gallery = '<div class="gallery"><div class="g-main media' + (first.fit === "contain" ? " is-model" : "") + '"><img id="gmain" src="' + img(first.src) + '" alt="' + esc(L(first.alt)) + '"></div>' +
         // 8'den fazla görselde ilk 7 küçük resim görünür, sonuncusu "+N" düğmesiyle açılır.
         (p.images.length > 1 ? '<div class="g-thumbs' + (p.images.length > 8 ? " collapsed" : "") + '">' + p.images.map(function (im, n) {
-          return '<button type="button" class="g-thumb media' + (im.fit === "contain" ? " is-model" : "") + (n === 0 ? " on" : "") + '" data-src="' + img(im.src) + '" data-alt="' + esc(L(im.alt)) + '" data-fit="' + (im.fit || "") + '" aria-label="' + esc(L(im.alt)) + '"><img loading="lazy" src="' + img(im.src) + '" alt=""></button>';
-        }).join("") + (p.images.length > 8 ? '<button type="button" class="g-more num" aria-label="' + esc(x.showAll || (lang === "en" ? "Show all images" : "Tüm görselleri göster")) + '">+' + (p.images.length - 7) + "</button>" : "") + "</div>" : "") + "</div>";
+          return '<button type="button" class="g-thumb media' + (im.fit === "contain" ? " is-model" : "") + (n === 0 ? " on" : "") + '" data-src="' + img(im.src) + '" data-alt="' + esc(L(im.alt)) + '" data-fit="' + (im.fit || "") + '" aria-label="' + esc(L(im.alt)) + '"><img loading="lazy" ' + imgAttrs(im.src, SZ.tiny) + ' alt=""></button>';
+        }).join("") + (p.images.length > 8 ? '<button type="button" class="g-more num" aria-label="+' + (p.images.length - 7) + " " + esc(x.showAll || (lang === "en" ? "Show all images" : "Tüm görselleri göster")) + '">+' + (p.images.length - 7) + "</button>" : "") + "</div>" : "") + "</div>";
     } else {
       gallery = '<div class="gallery">' + thumb(p, "g-main") + "</div>";
     }
@@ -857,14 +872,16 @@
   // Teknik notlar
   function fmtDate(d) { var m = d.split("-"), x = lang === "ar" ? T.en : t(); return parseInt(m[2], 10) + " " + x.months[parseInt(m[1], 10) - 1] + " " + m[0]; }
   function noteMeta(n) { var x = lang === "ar" ? T.en : t(); return '<span class="note-meta">' + (n.draft ? '<b class="draft-tag">' + (lang === "tr" ? "Taslak" : "Draft") + "</b> " : "") + esc(TC(x.cats[n.cat])) + " · " + esc(fmtDate(n.date)) + "</span>"; }
-  function noteCard(n) {
-    return '<a class="ncard" href="' + href("n-" + n.slug) + '">' + (n.image ? media(n.image, "", false) : "") +
-      '<div class="ncard-body">' + noteMeta(n) + "<h3>" + esc(TC(L(n.title))) + "</h3><p>" + esc(L(n.summary)) + '</p><span class="arrow">' + esc(t().readMore) + "</span></div></a>";
+  // h: başlık düzeyi (liste sayfasında üstte h2 olmadığı için h2, bölüm içinde h3); eager: ilk kart hemen yüklensin.
+  function noteCard(n, h, eager) {
+    h = h === "h2" ? "h2" : "h3";
+    return '<a class="ncard" href="' + href("n-" + n.slug) + '">' + (n.image ? media(n.image, "", eager === true, SZ.note) : "") +
+      '<div class="ncard-body">' + noteMeta(n) + "<" + h + ">" + esc(TC(L(n.title))) + "</" + h + "><p>" + esc(L(n.summary)) + '</p><span class="arrow">' + esc(t().readMore) + "</span></div></a>";
   }
   function viewNotes() {
     var x = t();
     return '<section class="page-head"><div class="wrap"><h1>' + esc(TC(x.notesTitle)) + '</h1><p class="lead">' + esc(x.notesLead) + "</p></div></section>" +
-      '<section class="block block-tight"><div class="wrap"><div class="notes-list">' + N.map(noteCard).join("") + "</div></div></section>" + ctaBlock();
+      '<section class="block block-tight"><div class="wrap"><div class="notes-list">' + N.map(function (n, i) { return noteCard(n, "h2", i === 0); }).join("") + "</div></div></section>" + ctaBlock();
   }
   function viewNote(slug) {
     var x = t(), n = null;
