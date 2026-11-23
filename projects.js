@@ -673,8 +673,8 @@ window.PROJECTS = [
   "kind": "design",
   "country": "TR",
   "desc": {
-   "tr": "Kütahya Organize Sanayi Bölgesi'nin 15.000 m³/gün kapasiteli atıksu arıtma tesisinde, inşaat işleri kapsamındaki 8 yapının statik projesini hazırladık. Yapılar arasında betonarme havuzlar ve dairesel çöktürme havuzu bulunuyor. Tasarımda ACI, BS ve TBDY 2018 yönetmeliklerini kullandık; proje Mart 2025'te teslim edildi.",
-   "en": "We prepared the structural design for the civil works of 8 structures at the 15,000 m³/day wastewater treatment plant of Kütahya Organised Industrial Zone. The structures include reinforced concrete basins and a circular clarifier. The design uses ACI, BS and TBDY 2018 codes and was delivered in March 2025."
+   "tr": "Kütahya Organize Sanayi Bölgesi'nin 15.000 m³/gün kapasiteli atıksu arıtma tesisinde, inşaat işleri kapsamındaki 9 yapının statik projesini hazırladık. Yapılar arasında betonarme havuzlar ve dairesel çöktürme havuzu bulunuyor. Tasarımda ACI, BS ve TBDY 2018 yönetmeliklerini kullandık; proje Mart 2025'te teslim edildi.",
+   "en": "We prepared the structural design for the civil works of 9 structures at the 15,000 m³/day wastewater treatment plant of Kütahya Organised Industrial Zone. The structures include reinforced concrete basins and a circular clarifier. The design uses ACI, BS and TBDY 2018 codes and was delivered in March 2025."
   },
   "title": {
    "tr": "Kütahya OSB Atıksu Arıtma Tesisi",
@@ -698,7 +698,7 @@ window.PROJECTS = [
    ],
    [
     "structures",
-    "8"
+    "9"
    ],
    [
     "codes",
@@ -1011,7 +1011,7 @@ window.PROJECTS = [
    ],
    [
     "structures",
-    "8"
+    "9"
    ],
    [
     "codes",
