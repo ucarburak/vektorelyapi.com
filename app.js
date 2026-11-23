@@ -591,6 +591,12 @@
   var SVC_IMG = { water: ["suluq-12.jpg", false], rc: ["k1-1.jpg", true], steel: ["novart-1.jpg", true] };
   // Dil düğmeleri. Yayında Arapça, Burak onaylayana kadar kapalı: build.js SITE.langs ile ["tr","en"] verir.
   var LANGS = SITE.langs || ["tr", "en", "ar"];
+  // Hizmet görsellerinin açıklaması: görselin ait olduğu projenin adı + projedeki görsel açıklaması.
+  function svcAlt(src) {
+    var r = "";
+    P.forEach(function (p) { p.images.forEach(function (im) { if (!r && im.src === src) r = L(p.title) + " · " + L(im.alt); }); });
+    return esc(r);
+  }
   function pathFor(view, l) {
     l = l || lang;
     if (l === "ar" && enOnly(view)) l = "en"; // gizlilik metni ve teknik notlar Arapçaya çevrilmedi
@@ -696,7 +702,7 @@
       var s = x.services[k];
       var rel = P.filter(function (p) { return p.cat === k; });
       var simg = { water: ["suluq-12.jpg", ""], rc: ["k1-1.jpg", " is-model"], steel: ["novart-1.jpg", " is-model"] }[k];
-      var body = '<article class="service" id="svc-' + k + '"><div class="media svc-img' + simg[1] + '"><img loading="lazy" ' + imgAttrs(simg[0], SZ.svc) + ' alt=""></div>' +
+      var body = '<article class="service" id="svc-' + k + '"><div class="media svc-img' + simg[1] + '"><img loading="lazy" ' + imgAttrs(simg[0], SZ.svc) + ' alt="' + svcAlt(simg[0]) + '"></div>' +
         '<div class="svc-no">0' + (n + 1) + '<span class="num">' + (lang === "ar" ? x.unitProjects(rel.length) : rel.length + " " + (lang === "en" ? "projects" : "proje")) + "</span></div>" +
         "<h3>" + esc(TC(s.title)) + "</h3><p>" + esc(s.text) + "</p>";
       if (full) {
@@ -771,7 +777,7 @@
       return '<section class="page-head"><div class="wrap"><h1>' + esc(TC(x.servicesTitle)) + '</h1><p class="lead">' + esc(x.svcLead) + "</p></div></section>" +
         '<section class="block"><div class="wrap"><div class="services">' + SVC.map(function (k, n) {
           var s = x.services[k], pg = x.svcPages[k], im = SVC_IMG[k], rel = svcProjects(k);
-          return '<a class="service svc-link" href="' + href("s-" + k) + '"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img loading="lazy" ' + imgAttrs(im[0], SZ.svc) + ' alt=""></div>' +
+          return '<a class="service svc-link" href="' + href("s-" + k) + '"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img loading="lazy" ' + imgAttrs(im[0], SZ.svc) + ' alt="' + svcAlt(im[0]) + '"></div>' +
             '<div class="svc-no">0' + (n + 1) + '<span class="num">' + rel.length + " " + (lang === "en" ? (rel.length === 1 ? "project" : "projects") : "proje") + "</span></div>" +
             "<h2>" + esc(TC(pg.title)) + "</h2><p>" + esc(s.text) + '</p><span class="arrow">' + esc(x.codesMore) + "</span></a>";
         }).join("") + "</div></div></section>" + ctaBlock();
@@ -788,7 +794,7 @@
     var html = '<section class="page-head"><div class="wrap"><a class="label" href="' + href("services") + '">' + esc(x.nav.services) + '</a><h1 class="svc-h1">' + esc(TC(pg.title)) + '</h1><p class="lead">' + esc(pg.lead) + "</p></div></section>" +
       '<section class="block block-tight"><div class="wrap svc-page"><div class="svc-main">' + pg.intro.map(function (q) { return "<p>" + esc(q) + "</p>"; }).join("") +
       "<h2>" + esc(TC(x.svcScope)) + '</h2><ul class="svc-list">' + list.map(function (li) { return "<li>" + esc(TC(li)) + "</li>"; }).join("") + "</ul></div>" +
-      '<aside class="svc-side"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img ' + imgAttrs(im[0], SZ.side) + ' alt=""></div>' +
+      '<aside class="svc-side"><div class="media svc-img' + (im[1] ? " is-model" : "") + '"><img ' + imgAttrs(im[0], SZ.side) + ' alt="' + svcAlt(im[0]) + '"></div>' +
       '<table class="tblock"><caption>' + esc(TC(x.approachTitle)) + '</caption><thead><tr><th>' + esc(x.approachHead[0]) + "</th><th>" + esc(x.approachHead[1]) + "</th></tr></thead><tbody>" +
       svcRows(k).map(function (r) { return "<tr><td>" + esc(r[0]) + '</td><td class="code">' + esc(r[1]) + "</td></tr>"; }).join("") + '</tbody></table><p class="svc-note">' + esc(x.approachLead) + "</p></aside></div></section>";
     if (rel.length) html += '<section class="block block-tight"><div class="wrap">' + sectionHead(x.svcProjects, "", '<a class="arrow" href="' + href("projects-" + k) + '">' + esc(TC(x.allProjects)) + "</a>") + '<div class="grid">' + rel.slice(0, 6).map(card).join("") + "</div></div></section>";
@@ -939,7 +945,7 @@
   }
 
   // Başlık çubuğu ve sayfa altı parçaları (önizlemede DOM'a yazılır, yayın sürümünde build.js sayfaya basar).
-  function chromeParts(active) {
+  function chromeParts(active, view) {
     var x = t();
     var nav = [["", x.nav.home], ["services", x.nav.services], ["projects", x.nav.projects]];
     if (N.length && x.nav.notes) nav.push(["notes", x.nav.notes]); // Arapça menüde yok (notlar yalnız TR/EN)
@@ -949,7 +955,13 @@
       nav: nav.map(function (n) { return '<a href="' + href(n[0]) + '" data-v="' + n[0] + '"' + (n[0] === active ? ' class="on"' : "") + ">" + esc(n[1]) + "</a>"; }).join(""),
       home: href(""),
       langLabel: x.langLabel,
-      lang: LANGS.map(function (l) { return '<button type="button" data-lang="' + l + '" lang="' + l + '" aria-pressed="' + (l === lang) + '">' + (l === "ar" ? "عربي" : l.toUpperCase()) + "</button>"; }).join(""),
+      // Yayında dil seçimi gerçek bağlantıdır: arama motorları İngilizce ve Arapça sayfaları buradan da bulur (Bing Site Scan, 23.11.2026).
+      lang: LANGS.map(function (l) {
+        var lab = l === "ar" ? "عربي" : l.toUpperCase();
+        var vv = view == null ? parse() : view, hl = l === "ar" && enOnly(vv) ? "en" : l; // Arapçası olmayan sayfada Arapça düğmesi İngilizceye gider
+        if (STATIC) return '<a href="' + pathFor(vv, l) + '" hreflang="' + hl + '" lang="' + l + '"' + (l === lang ? ' aria-current="true"' : "") + ">" + lab + "</a>";
+        return '<button type="button" data-lang="' + l + '" lang="' + l + '" aria-pressed="' + (l === lang) + '">' + lab + "</button>";
+      }).join(""),
       fnote: esc(x.footerNote),
       fcompany: esc(x.company),
       flinks: nav.map(function (n) { return '<a href="' + href(n[0]) + '">' + esc(n[1]) + "</a>"; }).join("") + '<a href="' + href("privacy") + '">' + esc(x.privacyLink) + '</a><a href="mailto:' + MAIL + '">' + MAIL + "</a>" +
@@ -1007,6 +1019,9 @@
     else if (v === "contact") title = TC(x.contactTitle) + " · " + base;
     else if (v === "privacy") { title = TC(x.privacyLink) + " · " + base; desc = x.privacy.lead; }
     else title = base + " · " + TC(x.heroTitle);
+    // Arama sonuçlarında kesilmesin: 70 karakteri aşan başlıkta firma adı eki düşer (Bing Site Scan, 23.11.2026).
+    var suf = " · " + base;
+    if (title.length > 70 && title.slice(-suf.length) === suf) title = title.slice(0, -suf.length);
     return { title: title, desc: desc };
   }
 
@@ -1039,7 +1054,7 @@
       page: function (v, l) {
         lang = l;
         var r = viewFor(v);
-        return { html: r.html, meta: metaFor(v), chrome: chromeParts(r.active), hasHero: /class="hero"|class="p-hero"/.test(r.html) };
+        return { html: r.html, meta: metaFor(v), chrome: chromeParts(r.active, v), hasHero: /class="hero"|class="p-hero"/.test(r.html) };
       }
     };
     return;
