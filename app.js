@@ -528,6 +528,67 @@
   // Arapça sayfalarda WhatsApp mesajları ve gizlilik metni İngilizce (yukarıdaki not).
   T.ar.waText = T.en.waText; T.ar.waSimilar = T.en.waSimilar; T.ar.qIntro = T.en.qIntro; T.ar.privacy = T.en.privacy;
 
+  // Ülke sayfaları (Burak, 26.11.2026): menüde yok, alt bilgiden bağlanır. Yalnız künyedeki bilgiler kullanılır.
+  // Şimdilik TR/EN; Arapçası Gemini kontrolünden sonra eklenecek (o zamana kadar Arapça bağlantı İngilizceye gider).
+  T.tr.countryPages = {
+    ly: {
+      title: "Libya'da Statik Proje",
+      lead: "Libya'da betonarme ve çelik yapıların, arıtma tesislerinin ve su tutan yapıların statik projesini ana yükleniciler ve proses firmaları için hazırlıyoruz.",
+      meta: "Libya'da statik proje: betonarme ve çelik yapılar, atıksu arıtma tesisleri, su depoları ve su tutan yapılar; ihale aşaması yapısal keşif ve metraj. Suluq ve Al Bayda'da referans projeler.",
+      intro: [
+        "Libya'da bugüne kadar tamamladığımız işler arıtma tesisleri ve su depoları üzerine. Suluq'ta 12.000 m³/gün kapasiteli atıksu arıtma tesisinde mevcut projenin revizyonlarını hazırladık; revizyonlar tesisteki 25 yapının tamamını kapsıyor. Aynı kentte 20.000 m³'lük temiz su deposu ve pompa istasyonunun statik projesini yaptık.",
+        "Al Bayda'da kapasiteleri 25.000, 75.000 ve 100.000 m³/gün olan üç atıksu arıtma tesisinin ihale aşaması yapısal dosyasını hazırladık; dosyayı hazırladığımız firma ihaleyi kazandı. Libya'daki işlerimizi ana yüklenici Set Construction / Timtaş için yürüttük.",
+        "İhale aşamasında yapısal keşif ve metrajla teklif hazırlayan yükleniciye destek veriyor, işi alan yükleniciye uygulama projesini hazırlıyor ve teslim ettiğimiz projeyi uygulama süresince destekliyoruz. Yazışmalarımız İngilizce ve Türkçe."
+      ],
+      projTitle: "Libya'daki Projeler"
+    },
+    iq: {
+      title: "Irak'ta Statik Proje",
+      lead: "Irak'ta betonarme ve çelik yapıların, arıtma tesislerinin ve su tutan yapıların statik projesini ana yükleniciler, proses firmaları ve yatırımcılar için hazırlıyoruz.",
+      meta: "Irak'ta statik proje: betonarme ve çelik yapılar, atıksu arıtma tesisleri ve su tutan yapılar; ihale aşaması yapısal keşif ve metraj. Basra ve Halepçe'de referans projeler.",
+      intro: [
+        "Irak'ta bugüne kadar tamamladığımız işler atıksu arıtma tesisleri üzerine. Basra'da 155.000 m³/gün kapasiteli atıksu arıtma tesisinin betonarme havuzlarını, kanallarını ve dairesel çöktürme havuzlarını projelendirdik; proje Kasım 2025'te teslim edildi.",
+        "Halepçe'de Halabja Group için 800 m³/gün kapasiteli atıksu arıtma tesisinin 10 yapısının statik projesini hazırladık; yapılar arasında betonarme havuzlar ve dairesel çöktürme havuzu var.",
+        "İhale aşamasında yapısal keşif ve metrajla teklif hazırlayan yükleniciye destek veriyor, işi alan yükleniciye uygulama projesini hazırlıyor ve teslim ettiğimiz projeyi uygulama süresince destekliyoruz. Yazışmalarımız İngilizce ve Türkçe."
+      ],
+      projTitle: "Irak'taki Projeler"
+    }
+  };
+  T.tr.countryCommon = {
+    rcSteel: "Arıtma tesislerinin yanında bina, endüstriyel tesis, depo ve atölye gibi betonarme ve çelik yapıların statik projesini de hazırlıyoruz. Bu alanlarda Türkiye'de tamamladığımız projelerden bazıları aşağıda.",
+    scope: ["Konut, ticari ve kamu binaları", "Endüstriyel tesis ve üretim binaları", "Çelik depo, atölye ve fabrika içi yapılar", "Ekipman ve makine temelleri", "Atıksu ve içme suyu arıtma tesisleri", "Su depoları ve pompa istasyonları", "İhale aşamasında yapısal keşif ve metraj", "Uygulama süresince proje desteği"],
+    otherTitle: "Betonarme ve Çelik Yapı Projelerimiz"
+  };
+  T.en.countryPages = {
+    ly: {
+      title: "Structural Design in Libya",
+      lead: "We prepare structural designs for concrete and steel structures, treatment plants and water-retaining structures in Libya, working for main contractors and process companies.",
+      meta: "Structural design in Libya: reinforced concrete and steel structures, wastewater treatment plants, water reservoirs and water-retaining structures, plus tender-stage structural quantities. Reference projects in Suluq and Al Bayda.",
+      intro: [
+        "Our completed work in Libya so far is on treatment plants and water reservoirs. At the 12,000 m³/day wastewater treatment plant in Suluq we prepared revisions to the existing design, covering all 25 structures on site. In the same town we prepared the structural design of a 20,000 m³ clean water reservoir and pump station.",
+        "In Al Bayda we prepared the tender-stage structural documentation for three wastewater treatment plants of 25,000, 75,000 and 100,000 m³/day; the contract was awarded to the bidder we worked for. Our projects in Libya were carried out for the main contractor Set Construction / Timtaş.",
+        "At tender stage we support bidding contractors with structural quantities; for the contractor who wins the job we prepare the detailed design, and we support our design throughout construction. We correspond in English and Turkish."
+      ],
+      projTitle: "Projects in Libya"
+    },
+    iq: {
+      title: "Structural Design in Iraq",
+      lead: "We prepare structural designs for concrete and steel structures, treatment plants and water-retaining structures in Iraq, working for main contractors, process companies and investors.",
+      meta: "Structural design in Iraq: reinforced concrete and steel structures, wastewater treatment plants and water-retaining structures, plus tender-stage structural quantities. Reference projects in Basra and Halabja.",
+      intro: [
+        "Our completed work in Iraq so far is on wastewater treatment plants. In Basra we designed the reinforced concrete basins, channels and circular clarifiers of a 155,000 m³/day wastewater treatment plant; the design was delivered in November 2025.",
+        "In Halabja we prepared the structural design of 10 structures at an 800 m³/day wastewater treatment plant for Halabja Group, including reinforced concrete basins and a circular clarifier.",
+        "At tender stage we support bidding contractors with structural quantities; for the contractor who wins the job we prepare the detailed design, and we support our design throughout construction. We correspond in English and Turkish."
+      ],
+      projTitle: "Projects in Iraq"
+    }
+  };
+  T.en.countryCommon = {
+    rcSteel: "Alongside treatment plants, we prepare structural designs for reinforced concrete and steel structures such as buildings, industrial facilities, warehouses and workshops. Some of the projects we have completed in these fields in Türkiye are shown below.",
+    scope: ["Residential, commercial and public buildings", "Industrial facilities and production buildings", "Steel warehouses, workshops and in-plant structures", "Equipment and machine foundations", "Wastewater and water treatment plants", "Water reservoirs and pump stations", "Tender-stage structural quantities", "Engineering support during construction"],
+    otherTitle: "Our Concrete and Steel Projects"
+  };
+
   // Arapça sayı-isim uyumu: 1 → tekil "واحد", 2 → ikil, 3–10 → çoğul, 11+ → tekil mansub (temyiz).
   function arCount(n, one, two, few, many) {
     if (n === 1) return one; if (n === 2) return two;
@@ -545,7 +606,7 @@
   var P = window.PROJECTS || [];
   // Teknik notlar (notes.js), en yeni önce. Arapçası yok: Arapça sayfalar İngilizce nota bağlanır.
   var N = (window.NOTES || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
-  function enOnly(view) { view = view || ""; return view === "privacy" || view === "notes" || view.indexOf("n-") === 0 || view.indexOf("s-") === 0; }
+  function enOnly(view) { view = view || ""; return view === "privacy" || view === "notes" || view.indexOf("n-") === 0 || view.indexOf("s-") === 0 || view.indexOf("c-") === 0; }
 
   // Sıra: biten işler teslim tarihine göre yeniden eskiye; tarihi olmayanlar en sonda.
   // Devam edenler en önde değil, ilk ONGOING_AFTER biten işin arkasına girer (Burak'ın isteği).
@@ -587,6 +648,14 @@
     en: { water: "treatment-plant-structural-design", rc: "reinforced-concrete-structural-design", steel: "steel-structural-design" }
   };
   SVC_SEG.ar = SVC_SEG.en;
+  // Ülke sayfaları (menüde yok, alt bilgiden): görünüm "c-ly", "c-iq"; yayın adresi ve yan görsel.
+  var COUNTRY = { ly: "LY", iq: "IQ" };
+  var COUNTRY_SEG = {
+    tr: { ly: "libya-statik-proje", iq: "irak-statik-proje" },
+    en: { ly: "structural-design-libya", iq: "structural-design-iraq" }
+  };
+  COUNTRY_SEG.ar = COUNTRY_SEG.en;
+  var COUNTRY_IMG = { ly: "suluq-9.jpg", iq: "halepce-2.jpg" };
   // Hizmet görselleri: [dosya, model ekran görüntüsü mü]
   var SVC_IMG = { water: ["suluq-12.jpg", false], rc: ["k1-1.jpg", true], steel: ["novart-1.jpg", true] };
   // Dil düğmeleri. Yayında Arapça, Burak onaylayana kadar kapalı: build.js SITE.langs ile ["tr","en"] verir.
@@ -606,6 +675,7 @@
     if (view.indexOf("p-") === 0) return pre + "/" + s.projects + "/" + view.slice(2) + "/";
     if (view.indexOf("n-") === 0) return pre + "/" + s.notes + "/" + view.slice(2) + "/";
     if (view.indexOf("s-") === 0) return pre + "/" + s.services + "/" + SVC_SEG[l][view.slice(2)] + "/";
+    if (view.indexOf("c-") === 0) return pre + "/" + COUNTRY_SEG[l][view.slice(2)] + "/";
     return pre + "/" + s[view] + "/";
   }
   var filter = { cat: "all", country: "all", status: "all" };
@@ -884,6 +954,27 @@
     return '<a class="ncard" href="' + href("n-" + n.slug) + '">' + (n.image ? media(n.image, "", eager === true, SZ.note) : "") +
       '<div class="ncard-body">' + noteMeta(n) + "<" + h + ">" + esc(TC(L(n.title))) + "</" + h + "><p>" + esc(L(n.summary)) + '</p><span class="arrow">' + esc(t().readMore) + "</span></div></a>";
   }
+  // Ülke sayfası: o ülkedeki işler, çalışma biçimi, su tutan yapılar tasarım yaklaşımı, projeler.
+  function viewCountry(k) {
+    var x = t(), pg = x.countryPages && x.countryPages[k], cc = x.countryCommon;
+    if (!pg) return viewHome();
+    var im = COUNTRY_IMG[k], model = false;
+    P.forEach(function (p) { p.images.forEach(function (i) { if (i.src === im && i.fit === "contain") model = true; }); });
+    var rel = P.filter(function (p) { return p.country === COUNTRY[k]; });
+    // Betonarme ve çelik: ana sayfadaki seçilmiş projelerden su dışı olanlar
+    var other = P.filter(function (p) { return p.featured && p.cat !== "water"; }).sort(function (a, b) { return a.featured - b.featured; });
+    var intro = pg.intro.slice(0, 2).concat([cc.rcSteel], pg.intro.slice(2));
+    return '<section class="page-head"><div class="wrap"><h1 class="svc-h1">' + esc(TC(pg.title)) + '</h1><p class="lead">' + esc(pg.lead) + "</p></div></section>" +
+      '<section class="block block-tight"><div class="wrap svc-page"><div class="svc-main">' + intro.map(function (q) { return "<p>" + esc(q) + "</p>"; }).join("") +
+      "<h2>" + esc(TC(x.svcScope)) + '</h2><ul class="svc-list">' + cc.scope.map(function (li) { return "<li>" + esc(TC(li)) + "</li>"; }).join("") + "</ul>" +
+      '<div class="svc-other">' + ["rc", "steel", "water"].map(function (q) { return '<a class="arrow" href="' + href("s-" + q) + '">' + esc(TC(x.svcPages[q].title)) + "</a>"; }).join("") + "</div></div>" +
+      '<aside class="svc-side"><div class="media svc-img' + (model ? " is-model" : "") + '"><img ' + imgAttrs(im, SZ.side) + ' alt="' + svcAlt(im) + '"></div></aside></div></section>' +
+      codesStrip() +
+      (rel.length ? '<section class="block block-tight"><div class="wrap">' + sectionHead(pg.projTitle, "", '<a class="arrow" href="' + href("projects") + '">' + esc(TC(x.allProjects)) + "</a>") + '<div class="grid">' + rel.map(card).join("") + "</div></div></section>" : "") +
+      (other.length ? '<section class="block block-tight"><div class="wrap">' + sectionHead(cc.otherTitle, "", '<a class="arrow" href="' + href("projects") + '">' + esc(TC(x.allProjects)) + "</a>") + '<div class="grid">' + other.map(card).join("") + "</div></div></section>" : "") +
+      ctaBlock();
+  }
+
   function viewNotes() {
     var x = t();
     return '<section class="page-head"><div class="wrap"><h1>' + esc(TC(x.notesTitle)) + '</h1><p class="lead">' + esc(x.notesLead) + "</p></div></section>" +
@@ -964,7 +1055,9 @@
       }).join(""),
       fnote: esc(x.footerNote),
       fcompany: esc(x.company),
-      flinks: nav.map(function (n) { return '<a href="' + href(n[0]) + '">' + esc(n[1]) + "</a>"; }).join("") + '<a href="' + href("privacy") + '">' + esc(x.privacyLink) + '</a><a href="mailto:' + MAIL + '">' + MAIL + "</a>" +
+      flinks: nav.map(function (n) { return '<a href="' + href(n[0]) + '">' + esc(n[1]) + "</a>"; }).join("") +
+        Object.keys(COUNTRY).map(function (k) { var cp = (x.countryPages || T.en.countryPages)[k]; return '<a href="' + href("c-" + k) + '">' + esc(TC(cp.title)) + "</a>"; }).join("") +
+        '<a href="' + href("privacy") + '">' + esc(x.privacyLink) + '</a><a href="mailto:' + MAIL + '">' + MAIL + "</a>" +
         SOCIAL.map(function (s) { return '<a class="soc" href="' + s[1] + '" target="_blank" rel="noopener" aria-label="' + s[0] + '" title="' + s[0] + '">' + s[3] + "</a>"; }).join("")
     };
   }
@@ -1015,6 +1108,7 @@
       var n = null; N.forEach(function (q) { if (q.slug === v.slice(2)) n = q; });
       if (n) { title = TC(L(n.title)) + " · " + base; desc = L(n.summary); } else title = base;
     }
+    else if (v.indexOf("c-") === 0 && x.countryPages && x.countryPages[v.slice(2)]) { title = TC(x.countryPages[v.slice(2)].title) + " · " + base; desc = x.countryPages[v.slice(2)].meta; }
     else if (v === "about") title = TC(x.aboutTitle) + " · " + base;
     else if (v === "contact") title = TC(x.contactTitle) + " · " + base;
     else if (v === "privacy") { title = TC(x.privacyLink) + " · " + base; desc = x.privacy.lead; }
@@ -1040,6 +1134,7 @@
     else if (v.indexOf("p-") === 0) { html = viewProject(v.slice(2)); active = "projects"; }
     else if (v === "notes") html = viewNotes();
     else if (v.indexOf("n-") === 0) { html = viewNote(v.slice(2)); active = "notes"; }
+    else if (v.indexOf("c-") === 0) html = viewCountry(v.slice(2));
     else if (v === "about") html = viewAbout();
     else if (v === "contact") html = viewContact();
     else if (v === "privacy") html = viewPrivacy();

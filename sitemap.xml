@@ -217,6 +217,30 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/services/steel-structural-design/"/>
   </url>
   <url>
+    <loc>https://www.vektorelyapi.com/libya-statik-proje/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/libya-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/structural-design-libya/"/>
+  </url>
+  <url>
+    <loc>https://www.vektorelyapi.com/en/structural-design-libya/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/libya-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/structural-design-libya/"/>
+  </url>
+  <url>
+    <loc>https://www.vektorelyapi.com/irak-statik-proje/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/irak-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/structural-design-iraq/"/>
+  </url>
+  <url>
+    <loc>https://www.vektorelyapi.com/en/structural-design-iraq/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/irak-statik-proje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vektorelyapi.com/en/structural-design-iraq/"/>
+  </url>
+  <url>
     <loc>https://www.vektorelyapi.com/projeler/novart-atolye/</loc>
     <lastmod>2026-11-26</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.vektorelyapi.com/projeler/novart-atolye/"/>
