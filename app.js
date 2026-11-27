@@ -1214,5 +1214,9 @@
   function solid() { document.querySelector(".top").classList.toggle("solid", window.scrollY > 40 || !document.body.classList.contains("has-hero")); }
   window.addEventListener("scroll", solid, { passive: true });
   if (!STATIC) window.addEventListener("hashchange", function () { render(); window.scrollTo(0, 0); });
-  render();
+  // Yayında (STATIC) sayfa build.js'ten hazır gelir: içerik yeniden çizilmez, yalnız davranışlar (menü, galeri,
+  // filtre, form) bağlanır. Yeniden çizmek, Google eski app.js'i önbellekten kullanınca yeni sayfa türlerini
+  // ana sayfa gibi gösteriyordu; Search Console 13 sayfayı "ana sayfanın kopyası" saydı (27.11.2026).
+  if (STATIC && app && app.children.length) solid();
+  else render();
 })();
